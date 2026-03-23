@@ -1,0 +1,37 @@
+# Claude Editor
+.claude/
+
+# Lokaler Entwicklungsserver
+server.py
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V7
+.Trashes
+
+# Rohdateien (nicht für die Website benötigt)
+IMG_0069.jpeg
+IMG_0071.jpeg
+IMG_0072.jpeg
+IMG_0074.jpeg
+IMG_0075.jpeg
+IMG_0076.jpeg
+IMG_0077.jpeg
+IMG_0078.jpeg
+IMG_0079.jpeg
+IMG_0333.jpeg
+IMG_0334.jpeg
+IMG_0335.JPG
+IMG_0336.jpeg
+IMG_0418.PNG
+IMG_0419.PNG
+IMG_0420.PNG
+IMG_0421.PNG
+
+# Original-Dateien, die durch WebP ersetzt wurden
+buero-reinigung-berlin-empfang.png
+buero-reinigung-berlin-schreibtisch.png
+unterhaltsreinigung-berlin-reinigungsteam.png
+apartment-cleaning.jpg

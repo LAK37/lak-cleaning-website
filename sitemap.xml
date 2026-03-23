@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ── HAUPTSEITEN ─────────────────────────────────────── -->
+
+  <!-- Startseite DE -->
+  <url>
+    <loc>https://www.lak-cleaningservice.de/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.lak-cleaningservice.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lak-cleaningservice.de/index-en.html"/>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Über uns -->
+  <url>
+    <loc>https://www.lak-cleaningservice.de/ueber-uns.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Startseite EN -->
+  <url>
+    <loc>https://www.lak-cleaningservice.de/index-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lak-cleaningservice.de/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.lak-cleaningservice.de/"/>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Leistungen Übersicht -->
+  <url>
+    <loc>https://www.lak-cleaningservice.de/leistungen.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── SEO LEISTUNGSSEITEN ─────────────────────────────── -->
+
+  <!-- Büroreinigung Berlin (höchste Priorität) -->
+  <url>
+    <loc>https://www.lak-cleaningservice.de/buero-reinigung-berlin.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Unterhaltsreinigung Berlin -->
+  <url>
+    <loc>https://www.lak-cleaningservice.de/unterhaltsreinigung-berlin.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Glasreinigung Berlin -->
+  <url>
+    <loc>https://www.lak-cleaningservice.de/glasreinigung-berlin.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Treppenhausreinigung Berlin -->
+  <url>
+    <loc>https://www.lak-cleaningservice.de/treppenhausreinigung-berlin.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Bürocontainer-Reinigung Berlin -->
+  <url>
+    <loc>https://www.lak-cleaningservice.de/buerocontainer-reinigung-berlin.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── RECHTLICHES ─────────────────────────────────────── -->
+
+  <url>
+    <loc>https://www.lak-cleaningservice.de/impressum.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.lak-cleaningservice.de/datenschutz.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
