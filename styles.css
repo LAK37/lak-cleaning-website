@@ -1333,7 +1333,7 @@ input, textarea, select, button { font-family: inherit; }
 /* ── SCROLL TO TOP BUTTON ───────────────────────────────── */
 .scroll-top-btn {
   position: fixed;
-  bottom: 28px;
+  bottom: 110px;
   right: 28px;
   width: 48px;
   height: 48px;
