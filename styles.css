@@ -1334,7 +1334,8 @@ input, textarea, select, button { font-family: inherit; }
 .scroll-top-btn {
   position: fixed;
   bottom: 32px;
-  right: 110px;
+  right: auto;
+  left: 32px;
   width: 48px;
   height: 48px;
   border-radius: 50%;
