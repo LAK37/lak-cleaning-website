@@ -163,9 +163,14 @@
       setTimeout(() => el.classList.add('visible'), delay);
       observer.unobserve(el);
     });
-  }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px 100px 0px' });
 
   elements.forEach(el => observer.observe(el));
+
+  // Fallback: alle Elemente nach 1,5s sichtbar machen falls Animation nicht ausgelöst wurde
+  setTimeout(() => {
+    elements.forEach(el => el.classList.add('visible'));
+  }, 1500);
 })();
 
 /* ── 6. COUNTER ANIMATION ─────────────────────────────────── */
