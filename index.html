@@ -1300,7 +1300,7 @@
           body: json
         });
         const result = await response.json();
-        if (result.success) {
+        if (response.ok) {
           formSuccess.style.display = 'flex';
           formError.style.display = 'none';
           form.reset();
