@@ -314,6 +314,7 @@ input, textarea, select, button { font-family: inherit; }
   letter-spacing: -0.02em;
 }
 .hero-title .line { display: block; }
+.hero-title .gradient-text { padding-bottom: 0.12em; }
 .hero-sub {
   font-size: clamp(1rem, 1.8vw, 1.2rem);
   color: var(--gray-1); max-width: 580px;
