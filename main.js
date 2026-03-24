@@ -276,6 +276,17 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
       map.style.display = 'block';
       if (placeholder) placeholder.style.display = 'none';
     }
+
+    // 3. Google Tag Manager aktivieren
+    if (!document.getElementById('gtm-script')) {
+      const gtmScript = document.createElement('script');
+      gtmScript.id = 'gtm-script';
+      gtmScript.async = true;
+      gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PBWP3VZ9';
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      document.head.appendChild(gtmScript);
+    }
   }
 
   /* Beim Laden prüfen ob Consent bereits gespeichert */
