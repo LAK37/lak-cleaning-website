@@ -246,7 +246,18 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
   const CONSENT_KEY = 'lak_cookie_consent';
 
-  /* Externe Dienste aktivieren (Google Fonts + Google Maps) */
+  /* GTM nur nach Einwilligung laden */
+  function loadGTM() {
+    if (window.gtmLoaded) return;
+    window.gtmLoaded = true;
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PBWP3VZ9');
+  }
+
+  /* Externe Dienste aktivieren (Google Fonts + Google Maps + GTM) */
   function activateExternalServices() {
     // 1. Google Fonts dynamisch laden
     if (!document.getElementById('google-fonts-link')) {
@@ -277,22 +288,15 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
       if (placeholder) placeholder.style.display = 'none';
     }
 
-    // 3. Google Tag Manager aktivieren
-    if (!document.getElementById('gtm-script')) {
-      const gtmScript = document.createElement('script');
-      gtmScript.id = 'gtm-script';
-      gtmScript.async = true;
-      gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PBWP3VZ9';
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-      document.head.appendChild(gtmScript);
-    }
+    // 3. Google Tag Manager laden (nur nach Einwilligung)
+    loadGTM();
   }
 
   /* Beim Laden prüfen ob Consent bereits gespeichert */
   const saved = localStorage.getItem(CONSENT_KEY);
   if (saved === 'accepted') {
     banner.classList.add('hidden');
+    loadGTM();
     activateExternalServices();
     return;
   }
@@ -308,6 +312,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   acceptBtn && acceptBtn.addEventListener('click', () => {
     localStorage.setItem(CONSENT_KEY, 'accepted');
     banner.classList.add('hidden');
+    loadGTM();
     activateExternalServices();
   });
 
@@ -321,6 +326,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   mapConsentBtn && mapConsentBtn.addEventListener('click', () => {
     localStorage.setItem(CONSENT_KEY, 'accepted');
     banner.classList.add('hidden');
+    loadGTM();
     activateExternalServices();
   });
 })();
