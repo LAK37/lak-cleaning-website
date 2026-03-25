@@ -1097,7 +1097,7 @@ input, textarea, select, button { font-family: inherit; }
   .philosophy-grid { grid-template-columns: 1fr; }
   .philosophy-mission { padding: 32px 28px; }
   .philosophy-mission blockquote { font-size: 1.1rem; }
-  .philosophy-inner .section-title { font-size: 1.4rem; }
+  .philosophy-inner .section-title { font-size: 1.1rem; word-break: keep-all; overflow-wrap: normal; }
   .about-grid { grid-template-columns: 1fr; gap: 60px; }
   .about-visual { order: -1; }
   .about-photos { grid-template-columns: 1fr 1fr; }
