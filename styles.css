@@ -86,6 +86,7 @@ input, textarea, select, button { font-family: inherit; }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  padding-bottom: 0.12em;
 }
 .section { padding: 120px 0; }
 .section-tag {
