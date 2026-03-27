@@ -992,7 +992,11 @@ input, textarea, select, button { font-family: inherit; }
 /* ── PHILOSOPHY SECTION ──────────────────────────────────── */
 .philosophy-section { background: var(--bg-2); }
 .philosophy-inner { text-align: center; }
-.philosophy-inner .section-title { margin-bottom: 12px; }
+.philosophy-inner .section-title {
+  margin-bottom: 12px;
+  overflow-wrap: normal;
+  word-break: normal;
+}
 .philosophy-inner .section-sub { max-width: 680px; margin: 0 auto 60px; }
 
 .philosophy-grid {
@@ -1097,7 +1101,7 @@ input, textarea, select, button { font-family: inherit; }
   .philosophy-grid { grid-template-columns: 1fr; }
   .philosophy-mission { padding: 32px 28px; }
   .philosophy-mission blockquote { font-size: 1.1rem; }
-  .philosophy-inner .section-title { font-size: 1.1rem; word-break: keep-all; overflow-wrap: normal; }
+  .philosophy-inner .section-title { font-size: 1.1rem; }
   .about-grid { grid-template-columns: 1fr; gap: 60px; }
   .about-visual { order: -1; }
   .about-photos { grid-template-columns: 1fr 1fr; }
@@ -1139,6 +1143,7 @@ input, textarea, select, button { font-family: inherit; }
   .about-photos { grid-template-columns: 1fr; }
   .photo-secondary { margin-bottom: 0; }
   .about-badge-float { display: none; }
+  .philosophy-inner .section-title { font-size: 1.8rem !important; }
 }
 
 /* ── MAP PLACEHOLDER (DSGVO) ─────────────────────────────── */
