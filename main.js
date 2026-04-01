@@ -329,6 +329,16 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     loadGTM();
     activateExternalServices();
   });
+
+  /* Einwilligung widerrufen – Cookie-Banner erneut anzeigen */
+  document.querySelectorAll('.cookie-reset-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      localStorage.removeItem(CONSENT_KEY);
+      banner.classList.remove('hidden');
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+  });
 })();
 
 /* ── 8c. FORM SUBMIT → Web3Forms (handled in index.html) ──── */
