@@ -154,7 +154,7 @@
     .hero-overlay { position:absolute; inset:0; background:linear-gradient(90deg, rgba(15,37,72,.90) 0%, rgba(15,37,72,.78) 55%, rgba(15,37,72,.45) 100%); }
     .hero-in { position:relative; max-width:1040px; margin:0 auto; padding:80px 24px; display:grid; grid-template-columns:1fr 360px; gap:56px; align-items:center; }
     .hero-tag { display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15); color:rgba(255,255,255,.85); font-size:.72rem; font-weight:700; padding:5px 12px; border-radius:20px; margin-bottom:18px; letter-spacing:.05em; text-transform:uppercase; }
-    .hero h1 { font-size:clamp(1.85rem,3.8vw,2.8rem); font-weight:900; line-height:1.12; color:#fff; letter-spacing:-.025em; margin-bottom:18px; }
+    .hero h1 { font-size:clamp(1.85rem,2.8vw,2.2rem); font-weight:900; line-height:1.15; color:#fff; letter-spacing:-.025em; margin-bottom:18px; }
     .hero h1 span { color:#93C5FD; }
     .hero-sub { font-size:1.05rem; line-height:1.75; color:rgba(255,255,255,.78); margin-bottom:28px; max-width:520px; }
     .hero-pts { list-style:none; margin-bottom:32px; display:flex; flex-direction:column; gap:9px; }
@@ -310,7 +310,9 @@
     .cta-fin .sub { color:rgba(255,255,255,.72); max-width:500px; margin:0 auto 32px; }
     .cta-fin-note { margin-top:14px; font-size:.77rem; color:rgba(255,255,255,.4); }
     @media(max-width:640px){
-      .cta-fin .btn { width:100%; justify-content:center; box-sizing:border-box; }
+      .cta-fin { overflow:hidden; padding:60px 18px; }
+      .cta-fin .wrap-s { padding:0; width:100%; box-sizing:border-box; }
+      .cta-fin .btn { width:100%; max-width:100%; display:block; text-align:center; box-sizing:border-box; }
       .cta-fin p[style] { font-size:.82rem !important; }
     }
 
@@ -322,7 +324,7 @@
     /* ── FOOTER ── */
     footer { background:var(--navy); border-top:1px solid rgba(255,255,255,.06); padding:24px; }
     .foot-in { max-width:1040px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:.78rem; color:rgba(255,255,255,.38); }
-    @media(max-width:640px){ .foot-in { flex-direction:column; align-items:flex-start; gap:6px; } .foot-in address { white-space:nowrap; } }
+    @media(max-width:640px){ .foot-in { flex-direction:column; align-items:flex-start; gap:6px; } .foot-in address { font-size:.7rem; } }
     footer a { color:rgba(255,255,255,.65); text-decoration:none; transition:color .15s; }
     footer a:hover { color:#fff; }
 
@@ -375,7 +377,7 @@
     .ck-tog input:disabled + .ck-sld { cursor:default; opacity:.7; }
     .ck-cat p { font-size:.77rem; color:var(--soft); line-height:1.55; }
     .ck-mfoot { padding:14px 22px; border-top:1px solid var(--border); display:flex; gap:8px; justify-content:flex-end; flex-wrap:wrap; align-items:center; }
-    @media(max-width:600px){ .ck-mfoot { flex-direction:column; align-items:stretch; } .ck-revoke { margin-right:0; order:3; text-align:center; width:100%; } }
+    @media(max-width:640px){ .ck-mfoot { flex-direction:column; align-items:stretch; flex-wrap:nowrap; gap:6px; } .ck-revoke { margin-right:0; order:3; text-align:center; width:100%; } .ck-mfoot .ck-btn { width:100%; } }
     .ck-revoke { background:transparent; color:var(--soft); border:1px solid var(--border); border-radius:6px; padding:8px 12px; font-size:.76rem; font-weight:600; cursor:pointer; font-family:inherit; transition:all .15s; margin-right:auto; white-space:nowrap; }
     .ck-revoke:hover { background:var(--bg2); color:var(--mid); }
 
@@ -535,22 +537,22 @@
       <div class="usp-card">
         <div class="usp-icon">👥</div>
         <h3>Feste Teams mit Objektkenntnis</h3>
-        <p>Immer dieselben Reinigungskräfte. Sie kennen Ihr Objekt, Ihre Standards und Ihre Abläufe – von Anfang an.</p>
+        <p>Immer dieselben Reinigungskräfte. Sie kennen Ihr Objekt, Ihre Standards und Ihre Abläufe, von Anfang an.</p>
       </div>
       <div class="usp-card">
         <div class="usp-icon">☎</div>
         <h3>Eine Ansprechpartnerin, direkt erreichbar</h3>
-        <p>Kein Callcenter, keine Ticketnummer. Sie erreichen uns direkt – für Fragen, Änderungen, Sonderwünsche.</p>
+        <p>Kein Callcenter, keine Ticketnummer. Sie erreichen uns direkt, für Fragen, Änderungen und Sonderwünsche.</p>
       </div>
       <div class="usp-card">
         <div class="usp-icon">📋</div>
         <h3>Klare Reinigungspläne</h3>
-        <p>Was gereinigt wird, wann und nach welchem Standard – alles transparent, nachvollziehbar, ohne Grauzone.</p>
+        <p>Was gereinigt wird, wann und nach welchem Standard: alles transparent, nachvollziehbar, ohne Grauzone.</p>
       </div>
       <div class="usp-card">
         <div class="usp-icon">⚡</div>
         <h3>Angebot in 24 Stunden</h3>
-        <p>Kein wochenlanger Vorlauf. Individuelles Angebot für Ihr Objekt – persönlich, schnell, ohne Papierkram.</p>
+        <p>Kein wochenlanger Vorlauf. Individuelles Angebot für Ihr Objekt, persönlich, schnell, ohne Papierkram.</p>
       </div>
       <div class="usp-card">
         <div class="usp-icon">🏢</div>
@@ -560,7 +562,7 @@
       <div class="usp-card">
         <div class="usp-icon">🛡️</div>
         <h3>Nachweisbare Qualität</h3>
-        <p>5,0 Sterne auf Google. Kunden, die wechseln – und bleiben. Ergebnisse, die für sich sprechen.</p>
+        <p>5,0 Sterne auf Google. Kunden, die wechseln und bleiben. Ergebnisse, die für sich sprechen.</p>
       </div>
     </div>
   </div>
@@ -574,19 +576,19 @@
         <span class="lbl">Das kennen Sie</span>
         <h2 class="h2">Warum der Reinigungsdienst immer wieder zum Thema wird</h2>
         <p>Sie wollten das Thema „Reinigung" eigentlich ein für alle Mal lösen. Stattdessen landet es immer wieder auf Ihrem Schreibtisch. Wegen Ausfällen. Wegen Beschwerden. Wegen Qualität, die von Woche zu Woche schwankt.</p>
-        <p>Das ist kein Pech – das ist ein strukturelles Problem vieler Reinigungsanbieter in Berlin.</p>
+        <p>Das ist kein Pech, das ist ein strukturelles Problem vieler Reinigungsanbieter in Berlin.</p>
         <ul class="problem-pts">
           <li><span class="arr">→</span> Ständig wechselnde Reinigungskräfte ohne Objektkenntnis</li>
           <li><span class="arr">→</span> Kein fester Ansprechpartner, nur Callcenter und Weiterleitungen</li>
           <li><span class="arr">→</span> Schwankende Qualität, die Ihre Mitarbeitenden und Kunden bemerken</li>
           <li><span class="arr">→</span> Interner Aufwand für Kontrolle, Nachsteuerung und Beschwerden</li>
-          <li><span class="arr">→</span> Kein durchgängiger Standard – kein verlässliches Ergebnis</li>
+          <li><span class="arr">→</span> Kein durchgängiger Standard, kein verlässliches Ergebnis</li>
         </ul>
       </div>
       <div class="problem-visual">
         <div class="ico">💡</div>
         <h3>Die Lösung ist kein besserer Putzmann.<br>Die Lösung ist ein besseres System.</h3>
-        <p>Feste Teams, die Ihr Objekt kennen. Klare Reinigungspläne. Eine Ansprechpartnerin, die erreichbar ist. So entsteht Verlässlichkeit – nicht durch Glück, sondern durch Struktur.</p>
+        <p>Feste Teams, die Ihr Objekt kennen. Klare Reinigungspläne. Eine Ansprechpartnerin, die erreichbar ist. So entsteht Verlässlichkeit, nicht durch Glück, sondern durch Struktur.</p>
       </div>
     </div>
   </div>
@@ -602,23 +604,23 @@
     <div class="cmp-grid">
       <div class="cbox cbox-red">
         <h3>✗ Ohne verlässliche Lösung</h3>
-        <p class="cbox-sub">Das Thema Reinigung landet immer wieder auf Ihrem Schreibtisch – trotz bestehendem Vertrag.</p>
+        <p class="cbox-sub">Das Thema Reinigung landet immer wieder auf Ihrem Schreibtisch, trotz bestehendem Vertrag.</p>
         <ul>
           <li>Sie erklären jedesmal neu, was gemacht werden soll</li>
-          <li>Mitarbeitende beschweren sich – Sie klären</li>
+          <li>Mitarbeitende beschweren sich, Sie klären</li>
           <li>Kunden und Besucher bemerken ungepflegte Räume</li>
           <li>Sie kontrollieren, mahnen, organisieren selbst nach</li>
           <li>Keiner fühlt sich wirklich zuständig</li>
         </ul>
       </div>
       <div class="cbox cbox-dark">
-        <h3>✓ Mit LAK – ab dem ersten Termin</h3>
+        <h3>✓ Mit LAK: ab dem ersten Termin</h3>
         <p class="cbox-sub">Das Thema Reinigung ist erledigt. Nicht „irgendwie", sondern dauerhaft und zuverlässig.</p>
         <ul>
-          <li>Ihr Team kennt Ihr Objekt – ohne Einarbeitung von vorne</li>
+          <li>Ihr Team kennt Ihr Objekt, ohne Einarbeitung von vorne</li>
           <li>Saubere Räume, ohne dass Sie es selbst prüfen müssen</li>
           <li>Professionelle Außenwirkung für Kunden und Besucher</li>
-          <li>Kein interner Aufwand – kein Nachsteuern, keine Kontrolle</li>
+          <li>Kein interner Aufwand, kein Nachsteuern, keine Kontrolle</li>
           <li>Eine Ansprechpartnerin, die Verantwortung übernimmt</li>
         </ul>
       </div>
@@ -639,12 +641,12 @@
       <div class="about-col">
         <div class="about-col-icon">👩‍💼</div>
         <h3>Linda Akuamoah – Gründerin &amp; direkte Ansprechpartnerin</h3>
-        <p>Ich habe LAK gegründet, weil ich selbst erlebt habe, wie frustrierend unzuverlässige Reinigung ist. Als Gründerin bin ich nicht im Hintergrund – ich bin Ihr erster Kontakt, persönlich erreichbar und direkt verantwortlich.</p>
+        <p>Ich habe LAK gegründet, weil ich selbst erlebt habe, wie frustrierend unzuverlässige Reinigung ist. Als Gründerin bin ich nicht im Hintergrund, ich bin Ihr erster Kontakt, persönlich erreichbar und direkt verantwortlich.</p>
       </div>
       <div class="about-col">
         <div class="about-col-icon">⭐</div>
         <h3>5,0 von 5: 14 verifizierte Google-Bewertungen</h3>
-        <p>Keine Agentur, die das für uns erledigt. Diese Bewertungen kommen von echten Kunden mit echten Namen – und wir verdienen sie täglich neu. Schauen Sie selbst auf Google nach.</p>
+        <p>Keine Agentur, die das für uns erledigt. Diese Bewertungen kommen von echten Kunden mit echten Namen, und wir verdienen sie täglich neu. Schauen Sie selbst auf Google nach.</p>
       </div>
       <div class="about-col">
         <div class="about-col-icon">🔄</div>
@@ -663,7 +665,7 @@
         <span class="lbl">Ihr Vorteil zum Start</span>
         <h2 class="h2">Intensiv-Erstreinigung inklusive, ohne Aufpreis</h2>
         <p>Jede neue Zusammenarbeit startet mit erhöhtem Aufwand. Rückstände, die sich angesammelt haben. Bereiche, die lange vernachlässigt wurden. Das gehört zur Realität.</p>
-        <p>Deshalb übernehmen wir diesen Mehraufwand bei der ersten Reinigung ohne zusätzliche Kosten. Sie starten sofort auf dem Niveau, das Sie erwarten – und das wir dauerhaft halten.</p>
+        <p>Deshalb übernehmen wir diesen Mehraufwand bei der ersten Reinigung ohne zusätzliche Kosten. Sie starten sofort auf dem Niveau, das Sie erwarten, und das wir dauerhaft halten.</p>
       </div>
       <div class="bonus-card">
         <h4>Was das konkret bedeutet:</h4>
@@ -671,7 +673,7 @@
           <li>Sichtbar saubererer Ausgangszustand ab Termin 1</li>
           <li>Keine Extrakosten für den erhöhten Anfangsaufwand</li>
           <li>Solide Basis für gleichbleibend hohe Qualität</li>
-          <li>Sie sehen sofort, wie wir arbeiten – keine leeren Versprechen</li>
+          <li>Sie sehen sofort, wie wir arbeiten, keine leeren Versprechen</li>
           <li>Professioneller, strukturierter Einstieg in die Zusammenarbeit</li>
         </ul>
       </div>
@@ -701,7 +703,7 @@
       <div class="step">
         <div class="step-n">3</div>
         <h4>Festes Team übernimmt ab Tag 1</h4>
-        <p>Ihr Team startet mit einer Intensiv-Erstreinigung und arbeitet dann verlässlich nach Plan – ohne Ihr Zutun.</p>
+        <p>Ihr Team startet mit einer Intensiv-Erstreinigung und arbeitet dann verlässlich nach Plan, ohne Ihr Zutun.</p>
       </div>
     </div>
   </div>
@@ -774,7 +776,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-q">Wie schnell können Sie mit der Reinigung starten?<span class="faq-plus">+</span></div>
-        <div class="faq-a">In der Regel innerhalb weniger Tage nach Auftragsbestätigung. Wir stimmen den Starttermin flexibel mit Ihnen ab – inklusive einer Intensiv-Erstreinigung, damit Ihr Objekt von Anfang an auf dem richtigen Niveau startet.</div>
+        <div class="faq-a">In der Regel innerhalb weniger Tage nach Auftragsbestätigung. Wir stimmen den Starttermin flexibel mit Ihnen ab, inklusive einer Intensiv-Erstreinigung, damit Ihr Objekt von Anfang an auf dem richtigen Niveau startet.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Für welche Objekte sind Sie geeignet?<span class="faq-plus">+</span></div>
@@ -827,7 +829,7 @@
       </div>
       <div class="form-card">
         <p class="form-card-h">Ihr kostenloses Angebot anfordern</p>
-        <p class="form-card-s">Kein Callcenter. Keine Standardantwort. Ich melde mich persönlich – Antwort in 24h.</p>
+        <p class="form-card-s">Kein Callcenter. Keine Standardantwort. Ich melde mich persönlich, Antwort in 24h.</p>
         <form id="anfrage-form" novalidate>
           <input type="hidden" name="access_key" value="61041ebd-30bf-42b2-adb9-1f20bf40da69" />
           <input type="hidden" name="subject" value="Neue Anfrage – LAK Cleaning Service" />
