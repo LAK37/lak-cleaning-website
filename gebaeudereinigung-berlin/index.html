@@ -369,7 +369,8 @@
     .ck-tog input:checked + .ck-sld::before { transform:translateX(18px); }
     .ck-tog input:disabled + .ck-sld { cursor:default; opacity:.7; }
     .ck-cat p { font-size:.77rem; color:var(--soft); line-height:1.55; }
-    .ck-mfoot { padding:14px 22px; border-top:1px solid var(--border); display:flex; gap:8px; justify-content:flex-end; flex-wrap:nowrap; align-items:center; }
+    .ck-mfoot { padding:14px 22px; border-top:1px solid var(--border); display:flex; gap:8px; justify-content:flex-end; flex-wrap:wrap; align-items:center; }
+    @media(max-width:480px){ .ck-mfoot { flex-direction:column; align-items:stretch; } .ck-revoke { margin-right:0; order:3; text-align:center; } }
     .ck-revoke { background:transparent; color:var(--soft); border:1px solid var(--border); border-radius:6px; padding:8px 12px; font-size:.76rem; font-weight:600; cursor:pointer; font-family:inherit; transition:all .15s; margin-right:auto; white-space:nowrap; }
     .ck-revoke:hover { background:var(--bg2); color:var(--mid); }
 
