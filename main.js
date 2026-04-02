@@ -426,3 +426,56 @@ style.textContent = `.nav-link.active { color: var(--white) !important; } .nav-l
 document.head.appendChild(style);
 
 console.log('%c LAK Cleaning Service — Premium Website ', 'background:#C9973A;color:#000;font-weight:bold;padding:8px 16px;border-radius:4px;');
+
+/* ── 14. FAKE EMAIL BLOCKER ───────────────────────────────── */
+(function initEmailBlocker() {
+  const FAKE_DOMAINS = [
+    'mailinator.com','guerrillamail.com','guerrillamail.net','guerrillamail.org',
+    'guerrillamail.de','guerrillamail.info','guerrillamail.biz','grr.la',
+    'sharklasers.com','spam4.me','yopmail.com','yopmail.fr','cool.fr.nf',
+    'jetable.fr.nf','nospam.ze.tc','nomail.xl.cx','mega.zik.dj','speed.1s.fr',
+    'courriel.fr.nf','moncourrier.fr.nf','trashmail.com','trashmail.me',
+    'trashmail.net','trashmail.org','trashmail.at','trashmail.io','trashmail.xyz',
+    'dispostable.com','maildrop.cc','fakeinbox.com','mailnull.com','throwam.com',
+    'discard.email','tempmail.com','10minutemail.com','10minutemail.net',
+    'tempinbox.com','spamgourmet.com','spamgourmet.net','spamgourmet.org',
+    'spambox.us','spamfree24.org','spamspot.com','spamthis.co.uk',
+    'wegwerfmail.de','wegwerfmail.net','wegwerfmail.org','spambog.com',
+    'filzmail.com','spamevader.com','emailsensei.com','trashdevil.com',
+    'mailexpire.com','spamfree.eu','spamhole.com','spaml.com','spampal.me'
+  ];
+
+  const form = document.querySelector('form[action*="web3forms"]');
+  if (!form) return;
+
+  const emailInput = form.querySelector('input[type="email"]');
+  const errorDiv   = form.querySelector('#formError') || null;
+
+  function showEmailError(msg) {
+    emailInput.style.borderColor = '#f87171';
+    if (errorDiv) {
+      errorDiv.textContent = msg;
+      errorDiv.style.display = 'block';
+    } else {
+      alert(msg);
+    }
+    emailInput.focus();
+  }
+
+  function clearEmailError() {
+    emailInput.style.borderColor = '';
+    if (errorDiv) errorDiv.style.display = 'none';
+  }
+
+  emailInput.addEventListener('input', clearEmailError);
+
+  form.addEventListener('submit', function(e) {
+    const email  = emailInput.value.trim().toLowerCase();
+    const domain = email.split('@')[1] || '';
+    if (FAKE_DOMAINS.includes(domain)) {
+      e.preventDefault();
+      showEmailError('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+      return false;
+    }
+  });
+})();
