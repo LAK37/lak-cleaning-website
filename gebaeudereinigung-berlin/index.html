@@ -309,6 +309,10 @@
     .cta-fin .h2 { color:#fff; max-width:660px; margin:0 auto 14px; font-size:clamp(1.5rem,3vw,2.1rem); }
     .cta-fin .sub { color:rgba(255,255,255,.72); max-width:500px; margin:0 auto 32px; }
     .cta-fin-note { margin-top:14px; font-size:.77rem; color:rgba(255,255,255,.4); }
+    @media(max-width:640px){
+      .cta-fin .btn { width:100%; justify-content:center; box-sizing:border-box; }
+      .cta-fin p[style] { font-size:.82rem !important; }
+    }
 
     /* ── SCROLL TO TOP ── */
     #scrollTop { position:fixed; bottom:28px; right:24px; width:44px; height:44px; background:var(--blue); color:#fff; border:none; border-radius:50%; cursor:pointer; font-size:1.1rem; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(0,0,0,.2); opacity:0; pointer-events:none; transition:opacity .25s, transform .25s; z-index:400; }
@@ -318,6 +322,7 @@
     /* ── FOOTER ── */
     footer { background:var(--navy); border-top:1px solid rgba(255,255,255,.06); padding:24px; }
     .foot-in { max-width:1040px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:.78rem; color:rgba(255,255,255,.38); }
+    @media(max-width:640px){ .foot-in { flex-direction:column; align-items:flex-start; gap:6px; } .foot-in address { white-space:nowrap; } }
     footer a { color:rgba(255,255,255,.65); text-decoration:none; transition:color .15s; }
     footer a:hover { color:#fff; }
 
@@ -370,7 +375,7 @@
     .ck-tog input:disabled + .ck-sld { cursor:default; opacity:.7; }
     .ck-cat p { font-size:.77rem; color:var(--soft); line-height:1.55; }
     .ck-mfoot { padding:14px 22px; border-top:1px solid var(--border); display:flex; gap:8px; justify-content:flex-end; flex-wrap:wrap; align-items:center; }
-    @media(max-width:480px){ .ck-mfoot { flex-direction:column; align-items:stretch; } .ck-revoke { margin-right:0; order:3; text-align:center; } }
+    @media(max-width:600px){ .ck-mfoot { flex-direction:column; align-items:stretch; } .ck-revoke { margin-right:0; order:3; text-align:center; width:100%; } }
     .ck-revoke { background:transparent; color:var(--soft); border:1px solid var(--border); border-radius:6px; padding:8px 12px; font-size:.76rem; font-weight:600; cursor:pointer; font-family:inherit; transition:all .15s; margin-right:auto; white-space:nowrap; }
     .ck-revoke:hover { background:var(--bg2); color:var(--mid); }
 
