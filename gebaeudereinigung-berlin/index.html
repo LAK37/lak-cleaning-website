@@ -180,6 +180,14 @@
     .proof-list li:last-child { border:none; }
     .proof-chk { color:var(--navy); font-weight:700; flex-shrink:0; margin-top:1px; }
 
+    /* ── PHOTO STRIP ── */
+    .photo-strip { padding:0; overflow:hidden; }
+    .photo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0; }
+    .photo-item { overflow:hidden; aspect-ratio:4/3; }
+    .photo-item img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s; }
+    .photo-item img:hover { transform:scale(1.03); }
+    @media(max-width:640px){ .photo-grid { grid-template-columns:1fr; } .photo-item { aspect-ratio:16/9; } }
+
     /* ── TRUST BAR ── */
     .trust-bar { background:var(--bg); border-bottom:1px solid var(--border); padding:13px 24px; }
     .trust-in { max-width:1040px; margin:0 auto; display:flex; justify-content:center; flex-wrap:wrap; }
@@ -523,6 +531,15 @@
     <div class="ti ti-hide">✓ Ausschließlich B2B Berlin</div>
   </div>
 </div>
+
+<!-- ══ PHOTO STRIP ══ -->
+<section class="photo-strip">
+  <div class="photo-grid">
+    <div class="photo-item"><img src="images/praxis-berlin.png" alt="Saubere Arztpraxis Berlin" loading="lazy"></div>
+    <div class="photo-item"><img src="images/office-berlin.png" alt="Sauberes Büro Berlin" loading="lazy"></div>
+    <div class="photo-item"><img src="images/lobby-berlin.png" alt="Saubere Bürolobby Berlin" loading="lazy"></div>
+  </div>
+</section>
 
 <!-- ══ COMPARE ══ -->
 <section class="compare">
