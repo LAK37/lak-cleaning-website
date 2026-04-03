@@ -850,8 +850,8 @@
             <input type="text" name="name" placeholder="Max Mustermann" required />
           </div>
           <div class="fg">
-            <label>Telefonnummer *</label>
-            <input type="tel" name="phone" placeholder="+49 30 ..." required />
+            <label>Telefonnummer</label>
+            <input type="tel" name="phone" placeholder="+49 30 ..." />
           </div>
           <div class="fg">
             <label>E-Mail *</label>
@@ -1134,7 +1134,7 @@
       const email = form.querySelector('[name="email"]').value.trim();
       const objekt = form.querySelector('[name="objektart"]').value;
 
-      const fields = ['name','phone','email','objektart'];
+      const fields = ['name','email','objektart'];
       let valid = true;
       fields.forEach(field=>{
         const el = form.querySelector('[name="'+field+'"]');
