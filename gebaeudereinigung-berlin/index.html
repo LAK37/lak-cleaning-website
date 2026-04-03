@@ -186,7 +186,7 @@
     .photo-item { overflow:hidden; aspect-ratio:4/3; }
     .photo-item img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s; }
     .photo-item img:hover { transform:scale(1.03); }
-    @media(max-width:640px){ .photo-grid { grid-template-columns:1fr; } .photo-item { aspect-ratio:16/9; } }
+    @media(max-width:640px){ .photo-grid { grid-template-columns:repeat(2,1fr); } .photo-item { aspect-ratio:1/1; } .photo-item:nth-child(3) { display:none; } }
 
     /* ── TRUST BAR ── */
     .trust-bar { background:var(--bg); border-bottom:1px solid var(--border); padding:13px 24px; }
