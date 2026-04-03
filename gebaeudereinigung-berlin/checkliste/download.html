@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KCY47NTW2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0KCY47NTW2');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkliste herunterladen | LAK Cleaning Service</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue: #1B3B6F;
+      --blue-dark: #0F2548;
+      --red: #C8293A;
+      --red-hover: #A8202F;
+      --bg: #F8FAFC;
+      --border: #E2E8F0;
+      --text: #0F172A;
+      --text-mid: #334155;
+      --text-soft: #64748B;
+      --green: #0D7A4E;
+      --gold: #F59E0B;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* ── NAV (minimal) ── */
+    .nav {
+      background: var(--blue-dark);
+      padding: 0 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 64px;
+    }
+    .nav-logo {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .nav-logo span { color: var(--gold); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 72px 24px 56px;
+      text-align: center;
+    }
+    .hero-icon {
+      font-size: 4.5rem;
+      display: block;
+      margin-bottom: 12px;
+      animation: floatIn 0.5s ease-out both;
+    }
+    @keyframes floatIn {
+      from { transform: translateY(-16px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .hero-label {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: rgba(27,59,111,0.08);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: clamp(1.65rem, 4vw, 2.4rem);
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-sub {
+      color: var(--text-mid);
+      font-size: 1rem;
+      line-height: 1.65;
+      max-width: 520px;
+      margin: 0 auto 32px;
+    }
+
+    /* ── DOWNLOAD BUTTON ── */
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--blue);
+      color: #fff;
+      /* ▼ Replace href below with actual PDF path when ready:
+         href="/checkliste/checkliste-gebaeudereinigung-berlin.pdf" */
+      text-decoration: none;
+      padding: 16px 36px;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      transition: background 0.2s, transform 0.15s;
+      letter-spacing: 0.1px;
+      box-shadow: 0 4px 16px rgba(27,59,111,0.22);
+    }
+    .btn-download:hover {
+      background: var(--blue-dark);
+      transform: translateY(-1px);
+    }
+    .btn-download:active { transform: translateY(0); }
+    .download-note {
+      margin-top: 12px;
+      font-size: 0.82rem;
+      color: var(--text-soft);
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      max-width: 700px;
+      margin: 0 auto 56px;
+      padding: 0 24px;
+    }
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .divider-text {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-soft);
+      white-space: nowrap;
+    }
+
+    /* ── UPSELL ── */
+    .upsell {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 48px 40px;
+      max-width: 820px;
+      margin: 0 auto;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+    .upsell-top {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .upsell-label {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: rgba(27,59,111,0.08);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .upsell h2 {
+      font-size: clamp(1.3rem, 2.8vw, 1.7rem);
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+      margin-bottom: 10px;
+    }
+    .upsell-sub {
+      color: var(--text-mid);
+      font-size: 0.97rem;
+      line-height: 1.6;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Benefits horizontal cards */
+    .benefits-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .benefit-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .benefit-card .b-icon {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .benefit-card .b-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .benefit-card .b-text {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      line-height: 1.5;
+    }
+
+    /* CTA within upsell */
+    .upsell-cta {
+      text-align: center;
+    }
+    .btn-red {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 32px;
+      border-radius: 8px;
+      font-size: 1.02rem;
+      font-weight: 700;
+      transition: background 0.2s, transform 0.15s;
+      letter-spacing: 0.1px;
+    }
+    .btn-red:hover {
+      background: var(--red-hover);
+      transform: translateY(-1px);
+    }
+    .btn-note {
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: var(--text-soft);
+    }
+
+    /* ── CHECKLIST PREVIEW ── */
+    .checklist-section {
+      padding: 56px 24px 72px;
+    }
+    .checklist-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .checklist-inner h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .checklist-items {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .checklist-item:last-child { border-bottom: none; }
+    .checklist-item:hover { background: #F8FAFC; }
+    .item-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .item-text {
+      font-size: 0.97rem;
+      color: var(--text-mid);
+      line-height: 1.55;
+      padding-top: 5px;
+      font-weight: 500;
+    }
+    .checklist-cta {
+      text-align: center;
+      margin-top: 28px;
+    }
+    .checklist-cta p {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      margin-bottom: 16px;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--blue-dark);
+      padding: 36px 24px;
+      color: #94A3B8;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-contact-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-contact-row a {
+      color: #CBD5E1;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-contact-row a:hover { color: #fff; }
+    .footer-copy {
+      font-size: 0.8rem;
+      width: 100%;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 12px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .benefits-row { grid-template-columns: 1fr; }
+      .upsell { padding: 28px 20px; }
+      .hero { padding: 48px 20px 40px; }
+      .checklist-item { padding: 14px 16px; gap: 12px; }
+    }
+    @media (max-width: 480px) {
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════
+       NAV (minimal)
+  ══════════════════════════════ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">LAK <span>Cleaning</span> Service</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════
+       HERO - Download
+  ══════════════════════════════ -->
+  <div class="hero">
+    <span class="hero-icon">📄</span>
+    <span class="hero-label">Ihr Download</span>
+    <h1>Ihre Checkliste steht bereit</h1>
+    <p class="hero-sub">Klicken Sie auf den Button, um die Checkliste herunterzuladen. Sie können sie ausdrucken oder digital verwenden.</p>
+
+    <!--
+      ▼ PDF-Pfad anpassen: Ersetzen Sie "#" mit dem tatsächlichen Pfad zur PDF-Datei:
+      href="/checkliste/checkliste-gebaeudereinigung-berlin.pdf"
+    -->
+    <a href="#" class="btn-download" download>
+      📥 Checkliste jetzt herunterladen
+    </a>
+    <p class="download-note">PDF · Kostenlos · Sofort verfügbar</p>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-text">Noch keine passende Reinigungsfirma?</div>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- ══════════════════════════════
+       UPSELL
+  ══════════════════════════════ -->
+  <div style="padding: 0 24px; margin-bottom: 56px;">
+    <div class="upsell">
+      <div class="upsell-top">
+        <span class="upsell-label">Nächster Schritt</span>
+        <h2>Haben Sie die passende Reinigungsfirma noch nicht gefunden?</h2>
+        <p class="upsell-sub">LAK Cleaning Service bietet Ihnen ein unverbindliches Angebot – passend für Büros, Praxen und Gewerbeobjekte in Berlin.</p>
+      </div>
+
+      <div class="benefits-row">
+        <div class="benefit-card">
+          <span class="b-icon">👥</span>
+          <div class="b-title">Feste Teams</div>
+          <p class="b-text">Immer dieselben Personen – für gleichbleibende Qualität und Sicherheit.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="b-icon">⚡</span>
+          <div class="b-title">Angebot in 24h</div>
+          <p class="b-text">Individuelles Angebot innerhalb von 24 Stunden – transparent und fair.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="b-icon">👩‍💼</span>
+          <div class="b-title">Direkte Ansprechpartnerin</div>
+          <p class="b-text">Kein Callcenter. Linda Akuamoah steht Ihnen persönlich zur Verfügung.</p>
+        </div>
+      </div>
+
+      <div class="upsell-cta">
+        <a href="/gebaeudereinigung-berlin#angebot" class="btn-red">Jetzt unverbindliches Angebot anfordern →</a>
+        <p class="btn-note">Kostenlos &nbsp;·&nbsp; Unverbindlich &nbsp;·&nbsp; Kein Callcenter</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       CHECKLIST PREVIEW
+  ══════════════════════════════ -->
+  <div class="checklist-section">
+    <div class="checklist-inner">
+      <h3>Das erwartet Sie in der Checkliste:</h3>
+      <div class="checklist-items">
+        <div class="checklist-item">
+          <div class="item-number">1</div>
+          <div class="item-text">Setzt die Firma wirklich feste Teams ein?</div>
+        </div>
+        <div class="checklist-item">
+          <div class="item-number">2</div>
+          <div class="item-text">Gibt es einen direkten Ansprechpartner?</div>
+        </div>
+        <div class="checklist-item">
+          <div class="item-number">3</div>
+          <div class="item-text">Wie reagiert die Firma bei Ausfällen?</div>
+        </div>
+        <div class="checklist-item">
+          <div class="item-number">4</div>
+          <div class="item-text">Gibt es klare Reinigungspläne und Standards?</div>
+        </div>
+        <div class="checklist-item">
+          <div class="item-number">5</div>
+          <div class="item-text">Wie transparent ist die Preisgestaltung?</div>
+        </div>
+        <div class="checklist-item">
+          <div class="item-number">6</div>
+          <div class="item-text">Gibt es nachweisbare Referenzen?</div>
+        </div>
+        <div class="checklist-item">
+          <div class="item-number">7</div>
+          <div class="item-text">Wie läuft die Qualitätskontrolle ab?</div>
+        </div>
+      </div>
+
+      <div class="checklist-cta">
+        <p>Alle 7 Punkte als übersichtliche Checkliste zum Ausdrucken oder digital nutzen.</p>
+        <!--
+          ▼ Gleicher Pfad wie oben – PDF-Link anpassen:
+          href="/checkliste/checkliste-gebaeudereinigung-berlin.pdf"
+        -->
+        <a href="#" class="btn-red" download style="display:inline-flex;align-items:center;gap:8px;">
+          📥 Checkliste herunterladen
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">LAK <span>Cleaning</span> Service</div>
+      <div class="footer-contact-row">
+        <a href="tel:+4917315168370">📞 +49 173 1516837</a>
+        <a href="mailto:info@lak-cleaningservice.de">✉️ info@lak-cleaningservice.de</a>
+      </div>
+      <div class="footer-copy">© 2024 LAK Cleaning Service · Linda Akuamoah · Berlin</div>
+    </div>
+  </footer>
+
+</body>
+</html>
