@@ -228,14 +228,17 @@
 
     /* ── ABOUT ── */
     .about { background:var(--white); }
-    .about-personal { display:grid; grid-template-columns:1fr 200px; gap:48px; align-items:start; }
+    .about-personal { display:grid; grid-template-columns:260px 1fr 180px; gap:40px; align-items:start; }
+    .about-photo { width:260px; border-radius:var(--rl); overflow:hidden; flex-shrink:0; }
+    .about-photo img { width:100%; height:100%; object-fit:cover; object-position:top; display:block; }
     .about-text p { font-size:.95rem; color:var(--mid); line-height:1.85; margin-bottom:14px; }
     .about-text p:last-child { margin-bottom:0; }
     .about-stats { display:flex; flex-direction:column; gap:12px; }
     .about-stat { background:var(--bg); border:1px solid var(--border); border-radius:var(--r); padding:16px; text-align:center; }
     .about-stat-n { font-size:1.7rem; font-weight:900; color:var(--navy); margin-bottom:3px; }
     .about-stat-l { font-size:.73rem; color:var(--soft); line-height:1.4; }
-    @media(max-width:900px){ .about-personal { grid-template-columns:1fr; } .about-stats { flex-direction:row; } }
+    @media(max-width:900px){ .about-personal { grid-template-columns:200px 1fr; } .about-photo { width:200px; } .about-stats { flex-direction:row; grid-column:1/-1; } }
+    @media(max-width:640px){ .about-personal { grid-template-columns:1fr; } .about-photo { width:100%; max-width:280px; margin:0 auto; } }
     @media(max-width:640px){ .about-stats { flex-direction:column; } }
 
     /* ── BONUS SECTION ── */
@@ -651,6 +654,9 @@
       <h2 class="h2">Kein Callcenter. Kein Wechsel. Persönliche Verantwortung für jedes Objekt.</h2>
     </div>
     <div class="about-personal">
+      <div class="about-photo">
+        <img src="images/linda.png" alt="Linda Akuamoah, Gründerin LAK Cleaning Service" loading="lazy">
+      </div>
       <div class="about-text">
         <p>Ich bin Linda, Gründerin von LAK Cleaning Service und Ihre direkte Ansprechpartnerin. Persönlich erreichbar. Persönlich verantwortlich. Für jedes Objekt, das wir betreuen.</p>
         <p>Ich habe LAK gegründet, weil ich selbst erlebt habe, wie frustrierend unzuverlässige Reinigung ist. Kein Callcenter, keine Weiterleitungen – ich bin Ihr erster Kontakt und sorge dafür, dass das feste Team dauerhaft auf dem Niveau arbeitet, das Sie erwarten.</p>
