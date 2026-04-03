@@ -186,7 +186,7 @@
 
     /* ── USPs ── */
     .usps { background:var(--white); }
-    .usp-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .usp-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
     .usp-card { background:var(--bg); border:1px solid var(--border); border-radius:var(--rl); padding:28px 22px; position:relative; overflow:hidden; transition:box-shadow .2s; }
     .usp-card:hover { box-shadow:0 4px 20px rgba(0,0,0,.08); }
     .usp-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--red); }
@@ -324,7 +324,7 @@
     /* ── FOOTER ── */
     footer { background:var(--navy); border-top:1px solid rgba(255,255,255,.06); padding:24px; }
     .foot-in { max-width:1040px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:.78rem; color:rgba(255,255,255,.38); }
-    @media(max-width:640px){ .foot-in { flex-direction:column; align-items:flex-start; gap:6px; } .foot-in address { font-size:.7rem; } }
+    @media(max-width:640px){ .foot-in { flex-direction:column; align-items:center; text-align:center; gap:6px; } .foot-in address { font-size:.7rem; } }
     footer a { color:rgba(255,255,255,.65); text-decoration:none; transition:color .15s; }
     footer a:hover { color:#fff; }
 
@@ -396,18 +396,18 @@
       .problem-in { grid-template-columns:minmax(0,1fr); }
       .cmp-grid { grid-template-columns:minmax(0,1fr); }
       .form-lay { grid-template-columns:minmax(0,1fr); }
-      .usp-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .usp-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } /* bleibt 2-spaltig */
       .about-cols { grid-template-columns:minmax(0,1fr); }
       .bonus-in { grid-template-columns:minmax(0,1fr); }
     }
     @media(max-width:640px){
       html, body { overflow-x:hidden; max-width:100%; }
       .wrap { overflow:hidden; }
-      section { padding:48px 0; }
+      section { padding:40px 0; }
       /* Hero – auf Mobile stärkeres Overlay für Lesbarkeit */
       .hero { min-height:auto; overflow:hidden; }
       .hero-bg { background-image:url('images/hero-mobile.jpg'); background-position:center top; background-size:100% auto; background-repeat:no-repeat; }
-      .hero-overlay { background:linear-gradient(180deg, rgba(15,37,72,.65) 0%, rgba(15,37,72,.58) 50%, rgba(15,37,72,.70) 100%) !important; }
+      .hero-overlay { background:linear-gradient(180deg, rgba(15,37,72,.82) 0%, rgba(15,37,72,.75) 50%, rgba(15,37,72,.82) 100%) !important; }
       .hero-in { padding:52px 18px 44px; width:100%; box-sizing:border-box; }
       .hero-in > * { min-width:0; max-width:100%; }
       .hero h1 { font-size:1.42rem; line-height:1.2; }
@@ -471,9 +471,9 @@
   <div class="hero-overlay"></div>
   <div class="hero-in">
     <div>
-      <div class="hero-tag">📍 Gebäudereinigung Berlin · Nur gewerbliche Kunden</div>
+      <div class="hero-tag">📍 Gebäudereinigung Berlin · Büros, Praxen &amp; Gewerbeobjekte</div>
       <h1>Gebäudereinigung Berlin.<br><span>Keine wechselnden Reinigungskräfte mehr.</span></h1>
-      <p class="hero-sub">Keine wechselnden Reinigungskräfte. Keine Überraschungen. Kein interner Koordinationsaufwand. Für Büros, Praxen und Gewerbeobjekte in Berlin, die auf eine Reinigungslösung zählen wollen.</p>
+      <p class="hero-sub">Für Büros, Praxen und Gewerbeobjekte in Berlin, die endlich auf eine Reinigungslösung zählen können – ohne Nachsteuern, ohne Überraschungen, ohne internen Aufwand.</p>
       <ul class="hero-pts">
         <li>Festes Reinigungsteam, immer dieselben Personen</li>
         <li>Direkte Ansprechpartnerin, kein Callcenter, keine Umwege</li>
@@ -531,8 +531,8 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="lbl">Was uns unterscheidet</span>
-      <h2 class="h2">6 Gründe, warum Berliner Unternehmen auf LAK setzen</h2>
-      <p class="sub">Wir sind keine Reinigungsfirma, die Sie irgendwo verwaltet. Wir sind ein strukturierter Partner, der Ihnen das Thema Reinigung dauerhaft vom Tisch nimmt.</p>
+      <h2 class="h2">Warum Berliner Unternehmen auf LAK setzen</h2>
+      <p class="sub">Kein anonymer Großanbieter. Kein Callcenter. Ein strukturierter Partner, der Ihnen das Thema Reinigung dauerhaft vom Tisch nimmt.</p>
     </div>
     <div class="usp-grid">
       <div class="usp-card">
@@ -554,16 +554,6 @@
         <div class="usp-icon">⚡</div>
         <h3>Angebot in 24 Stunden</h3>
         <p>Kein wochenlanger Vorlauf. Individuelles Angebot für Ihr Objekt, persönlich, schnell, ohne Papierkram.</p>
-      </div>
-      <div class="usp-card">
-        <div class="usp-icon">🏢</div>
-        <h3>Ausschließlich B2B Berlin</h3>
-        <p>Büros, Arztpraxen, Kanzleien, Agenturen, Gewerbeobjekte. Keine Privatkunden. Volle Konzentration auf Ihr Segment.</p>
-      </div>
-      <div class="usp-card">
-        <div class="usp-icon">🛡️</div>
-        <h3>Nachweisbare Qualität</h3>
-        <p>5,0 Sterne auf Google. Kunden, die wechseln und bleiben. Ergebnisse, die für sich sprechen.</p>
       </div>
     </div>
   </div>
@@ -587,9 +577,12 @@
         </ul>
       </div>
       <div class="problem-visual">
-        <div class="ico">💡</div>
         <h3>Die Lösung ist kein besserer Putzmann.<br>Die Lösung ist ein besseres System.</h3>
-        <p>Feste Teams, die Ihr Objekt kennen. Klare Reinigungspläne. Eine Ansprechpartnerin, die erreichbar ist. So entsteht Verlässlichkeit, nicht durch Glück, sondern durch Struktur.</p>
+        <ul style="list-style:none;margin-top:18px;">
+          <li style="display:flex;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:.88rem;opacity:.92;"><span style="color:#93C5FD;font-weight:700;flex-shrink:0;">✓</span> Feste Teams mit echtem Objektkenntnis</li>
+          <li style="display:flex;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:.88rem;opacity:.92;"><span style="color:#93C5FD;font-weight:700;flex-shrink:0;">✓</span> Klare Reinigungspläne, kein Nachsteuern</li>
+          <li style="display:flex;gap:10px;padding:9px 0;font-size:.88rem;opacity:.92;"><span style="color:#93C5FD;font-weight:700;flex-shrink:0;">✓</span> Eine Ansprechpartnerin, direkt erreichbar</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -635,7 +628,7 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="lbl">Wer wir sind</span>
-      <h2 class="h2">Kein anonymer Großanbieter. Ein persönlicher Reinigungsservice für Berliner Unternehmen.</h2>
+      <h2 class="h2">Kein Callcenter. Kein Wechsel. Persönliche Verantwortung für jedes Objekt.</h2>
       <p class="about-intro">Ich bin Linda, Gründerin von LAK Cleaning Service und Ihre direkte Ansprechpartnerin. Kein Callcenter, keine Weiterleitungen: Ich bin persönlich für jedes Objekt verantwortlich, das wir betreuen. Wir arbeiten mit festen Teams, klaren Strukturen und einer einfachen Prämisse: Reinigung, die dauerhaft funktioniert.</p>
     </div>
     <div class="about-cols">
@@ -664,16 +657,16 @@
     <div class="bonus-in">
       <div class="bonus-left">
         <span class="lbl">Ihr Vorteil zum Start</span>
-        <h2 class="h2">Intensiv-Erstreinigung inklusive, ohne Aufpreis</h2>
+        <h2 class="h2">Intensiv-Erstreinigung inklusive – ohne Aufpreis</h2>
         <p>Jede neue Zusammenarbeit startet mit erhöhtem Aufwand. Rückstände, die sich angesammelt haben. Bereiche, die lange vernachlässigt wurden. Das gehört zur Realität.</p>
         <p>Deshalb übernehmen wir diesen Mehraufwand bei der ersten Reinigung ohne zusätzliche Kosten. Sie starten sofort auf dem Niveau, das Sie erwarten, und das wir dauerhaft halten.</p>
       </div>
       <div class="bonus-card">
         <h4>Was das konkret bedeutet:</h4>
         <ul class="bonus-list">
-          <li>Sichtbar saubererer Ausgangszustand ab Termin 1</li>
+          <li>Sichtbar sauber ab dem ersten Termin</li>
           <li>Keine Extrakosten für den erhöhten Anfangsaufwand</li>
-          <li>Solide Basis für gleichbleibend hohe Qualität</li>
+          <li>Starke Grundlage für dauerhaft hohe Qualität</li>
           <li>Sie sehen sofort, wie wir arbeiten, keine leeren Versprechen</li>
           <li>Professioneller, strukturierter Einstieg in die Zusammenarbeit</li>
         </ul>
@@ -687,7 +680,7 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="lbl">So einfach geht es</span>
-      <h2 class="h2">In 3 Schritten zur Gebäudereinigung in Berlin, die dauerhaft funktioniert</h2>
+      <h2 class="h2">In 3 Schritten zur verlässlichen Gebäudereinigung in Berlin</h2>
       <p class="sub">Kein langer Vorlauf. Kein Papierkram. Anfragen, Angebot erhalten, loslegen.</p>
     </div>
     <div class="steps-row">
@@ -715,7 +708,7 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="lbl">Kundenstimmen</span>
-      <h2 class="h2">Was Berliner Unternehmen nach dem Wechsel zu LAK sagen</h2>
+      <h2 class="h2">Was Berliner Unternehmen nach dem Wechsel zu LAK&nbsp;sagen</h2>
     </div>
     <div class="g-row">
       <div class="g-pill">
@@ -796,14 +789,6 @@
         <div class="faq-a">Das besprechen wir individuell. Die Anfrage ist vollständig unverbindlich. Wir setzen auf Zusammenarbeit, die sich für beide Seiten bewährt, nicht auf erzwungene Bindung.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Was unterscheidet LAK von anderen Reinigungsfirmen?<span class="faq-plus">+</span></div>
-        <div class="faq-a">Feste Teams, direkte Ansprechpartnerin, klare Abläufe. Kein Callcenter, kein ständiger Wechsel, keine anonyme Großfirma. Wir sind ein strukturierter, persönlicher Reinigungsservice, der im Alltag funktioniert.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Wie läuft die erste Anfrage ab?<span class="faq-plus">+</span></div>
-        <div class="faq-a">Sie füllen das Formular aus oder rufen uns direkt an. Wir melden uns persönlich innerhalb von 24 Stunden mit einem individuellen Angebot. Kein Callcenter, kein Standardtext, kein Papierkram.</div>
-      </div>
-      <div class="faq-item">
         <div class="faq-q">In welchen Bereichen Berlins sind Sie tätig?<span class="faq-plus">+</span></div>
         <div class="faq-a">Wir betreuen Objekte in ganz Berlin. Nehmen Sie Kontakt auf und wir klären, ob Ihr Standort in unserem Einzugsgebiet liegt.</div>
       </div>
@@ -817,7 +802,7 @@
     <div class="form-lay">
       <div class="form-left">
         <span class="lbl">Jetzt anfragen</span>
-        <h2 class="h2">Angebot Gebäudereinigung Berlin, kostenlos und unverbindlich in 24h</h2>
+        <h2 class="h2">Kostenloses Angebot anfordern – ich melde mich persönlich in 24h</h2>
         <p>Füllen Sie das Formular aus. Ich melde mich persönlich mit einem Angebot, das wirklich zu Ihrem Objekt passt. Kein Callcenter, keine Standardantwort, kein Papierkram.</p>
         <ul class="form-trust">
           <li>Antwort innerhalb von 24 Stunden, direkt von mir</li>
@@ -865,7 +850,7 @@
             <textarea name="message" placeholder="z.B. Größe, Berliner Bezirk, gewünschte Häufigkeit…"></textarea>
           </div>
           <div style="margin-top:14px;">
-            <button type="submit" id="formSubmitBtn" class="btn btn-red btn-full btn-lg">Jetzt unverbindliches Angebot anfordern →</button>
+            <button type="submit" id="formSubmitBtn" class="btn btn-red btn-full btn-lg">Jetzt kostenlos anfragen →</button>
             <p class="form-note">🔒 Ihre Daten werden vertraulich behandelt. Mit dem Absenden stimmen Sie der Verarbeitung zur Angebotsbearbeitung gemäß unserer <a href="#" onclick="openM('datenschutz');return false;" style="color:var(--soft);text-decoration:underline;">Datenschutzerklärung</a> zu.</p>
           </div>
         </form>
@@ -879,11 +864,11 @@
 <!-- ══ CTA FINAL ══ -->
 <section class="cta-fin">
   <div class="wrap-s">
-    <h2 class="h2">Hören Sie auf, Ihren Reinigungsdienst zu koordinieren.</h2>
-    <p class="sub">Übergeben Sie das Thema an ein festes Team, das Ihr Objekt kennt und verlässlich arbeitet. Fordern Sie jetzt Ihr kostenloses Angebot an, ich melde mich persönlich innerhalb von 24 Stunden.</p>
+    <h2 class="h2">Geben Sie das Thema Reinigung dauerhaft ab.</h2>
+    <p class="sub">Ein festes Team übernimmt. Kein Nachsteuern, keine Überraschungen. Fordern Sie Ihr kostenloses Angebot an – ich melde mich persönlich innerhalb von 24 Stunden.</p>
     <a href="#angebot" class="btn btn-red btn-lg">Jetzt kostenlos Angebot anfordern →</a>
     <p style="margin-top:14px;"><a href="https://wa.me/491731516837?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Reinigungsleistungen." target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,.72);font-size:.88rem;text-decoration:none;font-weight:600;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.72)'">💬 Oder via WhatsApp schreiben: +49 173 1516837</a></p>
-    <p class="cta-fin-note">Kostenlos · Unverbindlich · Antwort in 24 Stunden · Nur B2B Berlin</p>
+    <p class="cta-fin-note">Kostenlos · Unverbindlich · Antwort in 24 Stunden ·<br>Nur B2B Berlin</p>
   </div>
 </section>
 
