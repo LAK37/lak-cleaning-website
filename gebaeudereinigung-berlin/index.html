@@ -42,7 +42,10 @@
 
   <!-- Bunny Fonts – DSGVO-konform (EU-CDN, kein IP-Logging) -->
   <link rel="preconnect" href="https://fonts.bunny.net" />
-  <link href="https://fonts.bunny.net/css?family=inter:400,400i,500,600,700,800,900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.bunny.net/css?family=inter:400,600,700,800&display=swap" rel="stylesheet" />
+  <!-- Hero-Bild vorladen für schnelleren LCP -->
+  <link rel="preload" as="image" href="images/hero.jpg" media="(min-width:641px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="images/hero-mobile.jpg" media="(max-width:640px)" fetchpriority="high" />
 
   <script type="application/ld+json">
   {
@@ -254,7 +257,7 @@
     .bonus-left .h2 { color:#fff; margin-bottom:16px; }
     .bonus-left p { font-size:.94rem; opacity:.8; line-height:1.8; margin-bottom:12px; }
     .bonus-card { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); border-radius:var(--rl); padding:30px 26px; }
-    .bonus-card h4 { font-size:.9rem; font-weight:700; margin-bottom:18px; color:rgba(255,255,255,.9); }
+    .bonus-card h3 { font-size:.9rem; font-weight:700; margin-bottom:18px; color:rgba(255,255,255,.9); }
     .bonus-list { list-style:none; }
     .bonus-list li { display:flex; gap:10px; align-items:flex-start; padding:8px 0; font-size:.87rem; color:rgba(255,255,255,.85); border-bottom:1px solid rgba(255,255,255,.1); }
     .bonus-list li:last-child { border:none; }
@@ -265,7 +268,7 @@
     .steps-row { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; max-width:780px; margin:0 auto; background:var(--border); border-radius:var(--rl); overflow:hidden; }
     .step { background:var(--white); padding:32px 26px; text-align:center; }
     .step-n { width:42px; height:42px; border-radius:50%; background:var(--blue); color:#fff; font-size:.9rem; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 14px; }
-    .step h4 { font-size:.9rem; font-weight:700; margin-bottom:7px; }
+    .step h3 { font-size:.9rem; font-weight:700; margin-bottom:7px; }
     .step p { font-size:.81rem; color:var(--soft); line-height:1.6; }
 
     /* ── TESTIMONIALS ── */
@@ -471,7 +474,7 @@
 <nav class="nav">
   <div class="nav-in">
     <a href="#top" class="logo">
-      <img src="logo_white_background_1.png" class="logo-img" alt="LAK Cleaning Service">
+      <img src="logo_white_background_1.png" class="logo-img" alt="LAK Cleaning Service" width="44" height="44" loading="eager">
       LAK Cleaning Service
     </a>
     <div class="nav-right">
@@ -694,17 +697,17 @@
     <div class="steps-row">
       <div class="step">
         <div class="step-n">1</div>
-        <h4>Anfrage in unter 2 Minuten</h4>
+        <h3>Anfrage in unter 2 Minuten</h3>
         <p>Formular ausfüllen oder direkt anrufen, komplett unverbindlich, ich melde mich persönlich.</p>
       </div>
       <div class="step">
         <div class="step-n">2</div>
-        <h4>Individuelles Angebot in 24h</h4>
+        <h3>Individuelles Angebot in 24h</h3>
         <p>Kein Standardangebot. Ich erstelle ein Angebot, das wirklich zu Ihrem Objekt, Ihren Zeiten und Ihrem Budget passt.</p>
       </div>
       <div class="step">
         <div class="step-n">3</div>
-        <h4>Festes Team übernimmt ab Tag 1</h4>
+        <h3>Festes Team übernimmt ab Tag 1</h3>
         <p>Ihr Team startet mit einer Intensiv-Erstreinigung und arbeitet dann verlässlich nach Plan, ohne Ihr Zutun.</p>
       </div>
     </div>
@@ -815,7 +818,7 @@
         <p>Deshalb übernehmen wir diesen Mehraufwand bei der ersten Reinigung ohne zusätzliche Kosten. Sie starten sofort auf dem Niveau, das Sie erwarten, und das wir dauerhaft halten.</p>
       </div>
       <div class="bonus-card">
-        <h4>Was das konkret bedeutet:</h4>
+        <h3>Was das konkret bedeutet:</h3>
         <ul class="bonus-list">
           <li>Sichtbar sauber ab Termin 1</li>
           <li>Keine Extrakosten für den erhöhten Anfangsaufwand</li>
@@ -866,8 +869,8 @@
             <input type="email" name="email" placeholder="info@ihr-unternehmen.de" required />
           </div>
           <div class="fg">
-            <label>Art des Objekts *</label>
-            <select name="objektart" required>
+            <label for="objektart">Art des Objekts *</label>
+            <select name="objektart" id="objektart" required>
               <option value="" disabled selected>Bitte wählen…</option>
               <option>Büro / Agentur</option>
               <option>Arzt- / Zahnarztpraxis</option>
@@ -883,7 +886,7 @@
           </div>
           <div style="margin-top:14px;">
             <button type="submit" id="formSubmitBtn" class="btn btn-red btn-full btn-lg">Jetzt kostenlos anfragen →</button>
-            <p class="form-note">🔒 Ihre Daten werden vertraulich behandelt. Mit dem Absenden stimmen Sie der Verarbeitung zur Angebotsbearbeitung gemäß unserer <a href="#" onclick="openM('datenschutz');return false;" style="color:var(--soft);text-decoration:underline;">Datenschutzerklärung</a> zu.</p>
+            <p class="form-note">🔒 Ihre Daten werden vertraulich behandelt. Mit dem Absenden stimmen Sie der Verarbeitung zur Angebotsbearbeitung gemäß unserer <a href="#datenschutz" onclick="openM('datenschutz');return false;" style="color:var(--soft);text-decoration:underline;">Datenschutzerklärung</a> zu.</p>
           </div>
         </form>
         <div id="formSuccess" class="form-result ok">✓ Vielen Dank! Ich melde mich persönlich innerhalb von 24 Stunden bei Ihnen.</div>
@@ -918,9 +921,9 @@
       <a href="mailto:info@lak-cleaningservice.de">info@lak-cleaningservice.de</a>
     </span>
     <span>
-      <a href="#" onclick="openM('impressum');return false;">Impressum</a> ·
-      <a href="#" onclick="openM('datenschutz');return false;">Datenschutz</a> ·
-      <a href="#" onclick="openCkSet();return false;">Cookie-Einstellungen</a>
+      <a href="#impressum" onclick="openM('impressum');return false;">Impressum</a> ·
+      <a href="#datenschutz" onclick="openM('datenschutz');return false;">Datenschutz</a> ·
+      <a href="#cookie-einstellungen" onclick="openCkSet();return false;">Cookie-Einstellungen</a>
     </span>
   </div>
 </footer>
