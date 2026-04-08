@@ -40,12 +40,15 @@
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PBWP3VZ9');</script>
 
-  <!-- Bunny Fonts – DSGVO-konform (EU-CDN, kein IP-Logging) -->
-  <link rel="preconnect" href="https://fonts.bunny.net" />
-  <link href="https://fonts.bunny.net/css?family=inter:400,600,700,800&display=swap" rel="stylesheet" />
+  <!-- Bunny Fonts – DSGVO-konform (EU-CDN, kein IP-Logging) – non-blocking -->
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
+  <link rel="preconnect" href="https://www.google-analytics.com" />
+  <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+  <link rel="preload" href="https://fonts.bunny.net/css?family=inter:400,600,700&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.bunny.net/css?family=inter:400,600,700&display=optional" rel="stylesheet"></noscript>
   <!-- Hero-Bild vorladen für schnelleren LCP -->
-  <link rel="preload" as="image" href="images/hero.jpg" media="(min-width:641px)" fetchpriority="high" />
-  <link rel="preload" as="image" href="images/hero-mobile.jpg" media="(max-width:640px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="images/hero.webp" media="(min-width:641px)" fetchpriority="high" type="image/webp" />
+  <link rel="preload" as="image" href="images/hero-mobile.webp" media="(max-width:640px)" fetchpriority="high" type="image/webp" />
 
   <script type="application/ld+json">
   {
@@ -126,7 +129,7 @@
     .wrap-s { max-width:740px;  margin:0 auto; padding:0 24px; }
     section { padding:72px 0; }
     .lbl { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--red); margin-bottom:10px; }
-    .h2  { font-size:clamp(1.5rem,2.8vw,2.05rem); font-weight:800; line-height:1.2; letter-spacing:-.02em; margin-bottom:12px; }
+    .h2  { font-size:clamp(1.5rem,2.8vw,2.05rem); font-weight:700; line-height:1.2; letter-spacing:-.02em; margin-bottom:12px; }
     .sub { font-size:1rem; color:var(--soft); line-height:1.75; }
     .sec-head { text-align:center; margin-bottom:52px; }
     .sec-head .sub { max-width:560px; margin:0 auto; }
@@ -142,7 +145,7 @@
     /* ── NAV ── */
     .nav { background:var(--navy); position:sticky; top:0; z-index:300; border-bottom:1px solid rgba(255,255,255,.06); }
     .nav-in { max-width:1040px; margin:0 auto; padding:0 24px; display:flex; justify-content:space-between; align-items:center; height:62px; }
-    .logo { display:flex; align-items:center; gap:10px; color:#fff; font-size:1rem; font-weight:800; text-decoration:none; }
+    .logo { display:flex; align-items:center; gap:10px; color:#fff; font-size:1rem; font-weight:700; text-decoration:none; }
     .logo-img { width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0; }
     .nav-right { display:flex; align-items:center; gap:20px; }
     .nav-tel { color:rgba(255,255,255,.65); font-size:.82rem; font-weight:500; text-decoration:none; transition:color .15s; }
@@ -158,7 +161,7 @@
     }
     .hero-bg {
       position:absolute; inset:0;
-      background-image:url('images/hero.jpg');
+      background-image:url('images/hero.webp');
       background-size:cover; background-position:center 30%;
       opacity:1;
     }
@@ -167,12 +170,12 @@
     .hero-tag { display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15); color:rgba(255,255,255,.85); font-size:.72rem; font-weight:700; padding:5px 12px; border-radius:20px; margin-bottom:18px; letter-spacing:.05em; text-transform:uppercase; }
     .tag-short { display:none; }
     @media(max-width:640px){ .tag-full { display:none; } .tag-short { display:inline; } }
-    .hero h1 { font-size:clamp(1.85rem,2.8vw,2.2rem); font-weight:900; line-height:1.15; color:#fff; letter-spacing:-.025em; margin-bottom:18px; }
+    .hero h1 { font-size:clamp(1.85rem,2.8vw,2.2rem); font-weight:700; line-height:1.15; color:#fff; letter-spacing:-.025em; margin-bottom:18px; }
     .hero h1 span { color:#93C5FD; }
     .hero-sub { font-size:1.05rem; line-height:1.75; color:rgba(255,255,255,.78); margin-bottom:28px; max-width:520px; }
     .hero-pts { list-style:none; margin-bottom:32px; display:flex; flex-direction:column; gap:9px; }
     .hero-pts li { display:flex; align-items:center; gap:10px; font-size:.9rem; font-weight:600; color:rgba(255,255,255,.92); }
-    .hero-pts li::before { content:'✓'; color:#93C5FD; font-weight:800; flex-shrink:0; }
+    .hero-pts li::before { content:'✓'; color:#93C5FD; font-weight:700; flex-shrink:0; }
     .hero-ctas { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:20px; }
     .hero-micro { font-size:.74rem; color:rgba(255,255,255,.65); }
 
@@ -184,7 +187,7 @@
     .proof-live-lbl { font-size:.72rem; font-weight:700; color:var(--soft); text-transform:uppercase; letter-spacing:.05em; }
     .proof-rating { display:flex; align-items:center; gap:8px; margin-bottom:16px; }
     .proof-stars { color:var(--gold); font-size:1.1rem; letter-spacing:1px; }
-    .proof-score { font-size:1.25rem; font-weight:900; }
+    .proof-score { font-size:1.25rem; font-weight:700; }
     .proof-cnt { font-size:.76rem; color:var(--soft); }
     .proof-list { list-style:none; margin-bottom:20px; }
     .proof-list li { display:flex; gap:9px; align-items:flex-start; padding:8px 0; font-size:.84rem; color:var(--mid); border-bottom:1px solid var(--border); }
@@ -217,7 +220,7 @@
 
     /* ── PROBLEM-VISUAL (in Compare) ── */
     .problem-visual { background:linear-gradient(135deg, var(--blue) 0%, var(--navy) 100%); border-radius:var(--rl); padding:40px 32px; color:#fff; }
-    .problem-visual h3 { font-size:1.15rem; font-weight:800; margin-bottom:12px; }
+    .problem-visual h3 { font-size:1.15rem; font-weight:700; margin-bottom:12px; }
     .pv-list { list-style:none; margin-top:18px; }
     .pv-list li { display:flex; gap:10px; padding:9px 0; border-bottom:1px solid rgba(255,255,255,.12); font-size:.88rem; opacity:.92; }
     .pv-list li:last-child { border:none; }
@@ -229,8 +232,8 @@
     .cbox { border-radius:var(--rl); padding:32px 28px; }
     .cbox-red { background:var(--red); color:#fff; }
     .cbox-dark { background:var(--navy); color:#fff; }
-    .cbox h3 { font-size:1rem; font-weight:800; margin-bottom:6px; display:flex; align-items:center; gap:8px; }
-    .cbox-sub { font-size:.82rem; opacity:.75; margin-bottom:22px; line-height:1.6; }
+    .cbox h3 { font-size:1rem; font-weight:700; margin-bottom:6px; display:flex; align-items:center; gap:8px; }
+    .cbox-sub { font-size:.82rem; color:rgba(255,255,255,.9); margin-bottom:22px; line-height:1.6; }
     .cbox ul { list-style:none; }
     .cbox ul li { display:flex; gap:10px; align-items:flex-start; padding:8px 0; font-size:.86rem; border-bottom:1px solid rgba(255,255,255,.1); }
     .cbox ul li:last-child { border:none; }
@@ -244,7 +247,7 @@
     .about-text p:last-child { margin-bottom:0; }
     .about-stats { display:flex; flex-direction:column; gap:12px; }
     .about-stat { background:var(--bg); border:1px solid var(--border); border-radius:var(--r); padding:16px; text-align:center; }
-    .about-stat-n { font-size:1.7rem; font-weight:900; color:var(--navy); margin-bottom:3px; }
+    .about-stat-n { font-size:1.7rem; font-weight:700; color:var(--navy); margin-bottom:3px; }
     .about-stat-l { font-size:.73rem; color:var(--soft); line-height:1.4; }
     @media(max-width:900px){ .about-personal { grid-template-columns:1fr; } .about-stats { flex-direction:row; } }
     @media(max-width:640px){ .about-stats { flex-direction:column; } }
@@ -267,7 +270,7 @@
     .steps { background:var(--bg); }
     .steps-row { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; max-width:780px; margin:0 auto; background:var(--border); border-radius:var(--rl); overflow:hidden; }
     .step { background:var(--white); padding:32px 26px; text-align:center; }
-    .step-n { width:42px; height:42px; border-radius:50%; background:var(--blue); color:#fff; font-size:.9rem; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 14px; }
+    .step-n { width:42px; height:42px; border-radius:50%; background:var(--blue); color:#fff; font-size:.9rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin:0 auto 14px; }
     .step h3 { font-size:.9rem; font-weight:700; margin-bottom:7px; }
     .step p { font-size:.81rem; color:var(--soft); line-height:1.6; }
 
@@ -276,7 +279,7 @@
     .g-row { display:flex; justify-content:center; align-items:center; gap:12px; margin-bottom:40px; flex-wrap:wrap; }
     .g-pill { display:flex; align-items:center; gap:10px; background:var(--white); border:1px solid var(--border); border-radius:32px; padding:10px 22px; box-shadow:0 2px 8px rgba(0,0,0,.05); }
     .g-stars { color:var(--gold); letter-spacing:1px; }
-    .g-score { font-size:1.1rem; font-weight:900; }
+    .g-score { font-size:1.1rem; font-weight:700; }
     .g-cnt { font-size:.77rem; color:var(--soft); }
     .testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
     .tc { background:var(--bg); border:1px solid var(--border); border-radius:var(--rl); padding:22px 20px; display:flex; flex-direction:column; gap:12px; }
@@ -313,7 +316,7 @@
     .form-trust li::before { content:'✓'; color:var(--green); font-weight:700; flex-shrink:0; }
     .form-card { background:var(--bg); border:1px solid var(--border); border-radius:var(--rl); padding:32px 28px; box-shadow:0 4px 24px rgba(0,0,0,.07); }
     .form-badge { background:rgba(13,122,78,.07); border:1px solid rgba(13,122,78,.15); border-radius:6px; padding:9px 13px; font-size:.78rem; color:var(--green); font-weight:700; margin-bottom:16px; display:flex; align-items:center; gap:6px; }
-    .form-card-h { font-size:1.05rem; font-weight:800; margin-bottom:3px; }
+    .form-card-h { font-size:1.05rem; font-weight:700; margin-bottom:3px; }
     .form-card-s { font-size:.8rem; color:var(--soft); margin-bottom:18px; }
     .fg { margin-bottom:11px; }
     .fg label { display:block; font-size:.79rem; font-weight:600; color:var(--mid); margin-bottom:4px; }
@@ -341,9 +344,9 @@
 
     /* ── FOOTER ── */
     footer { background:var(--navy); border-top:1px solid rgba(255,255,255,.06); padding:24px; }
-    .foot-in { max-width:1040px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:.78rem; color:rgba(255,255,255,.38); }
+    .foot-in { max-width:1040px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:.78rem; color:rgba(255,255,255,.7); }
     @media(max-width:640px){ .foot-in { flex-direction:column; align-items:center; text-align:center; gap:6px; } .foot-in address { font-size:.7rem; } }
-    footer a { color:rgba(255,255,255,.65); text-decoration:none; transition:color .15s; }
+    footer a { color:rgba(255,255,255,.85); text-decoration:none; transition:color .15s; }
     footer a:hover { color:#fff; }
 
     /* ── MODALS ── */
@@ -424,7 +427,7 @@
       section { padding:40px 0; }
       /* Hero – auf Mobile stärkeres Overlay für Lesbarkeit */
       .hero { min-height:auto; overflow:hidden; }
-      .hero-bg { background-image:url('images/hero-mobile.jpg'); background-position:center top; background-size:100% auto; background-repeat:no-repeat; }
+      .hero-bg { background-image:url('images/hero-mobile.webp'); background-position:center top; background-size:100% auto; background-repeat:no-repeat; }
       .hero-overlay { background:linear-gradient(180deg, rgba(15,37,72,.75) 0%, rgba(15,37,72,.68) 50%, rgba(15,37,72,.75) 100%) !important; }
       .proof-list li:nth-child(n+2) { display:none; }
       .hero-in { padding:52px 18px 44px; width:100%; box-sizing:border-box; }
@@ -474,11 +477,11 @@
 <nav class="nav">
   <div class="nav-in">
     <a href="#top" class="logo">
-      <img src="logo_white_background_1.png" class="logo-img" alt="LAK Cleaning Service" width="44" height="44" loading="eager">
+      <img src="logo_white_background_1.webp" class="logo-img" alt="LAK Cleaning Service" width="44" height="44" loading="eager">
       LAK Cleaning Service
     </a>
     <div class="nav-right">
-      <a href="https://wa.me/491731516837?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Reinigungsleistungen." class="nav-tel" id="navTel" target="_blank" rel="noopener noreferrer">💬 +49 173 1516837</a>
+      <a href="https://wa.me/491731516837?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Reinigungsleistungen." class="nav-tel" id="navTel" target="_blank" rel="noopener noreferrer" aria-label="Per WhatsApp schreiben: +49 173 1516837">💬 +49 173 1516837</a>
       <a href="#angebot" class="btn btn-red" style="padding:10px 18px;font-size:.82rem;">Angebot anfordern</a>
     </div>
   </div>
@@ -547,9 +550,24 @@
 <!-- ══ PHOTO STRIP ══ -->
 <section class="photo-strip">
   <div class="photo-grid">
-    <div class="photo-item"><img src="images/praxis-berlin.png" alt="Saubere Arztpraxis Berlin" loading="lazy"></div>
-    <div class="photo-item"><img src="images/office-berlin.png" alt="Sauberes Büro Berlin" loading="lazy"></div>
-    <div class="photo-item"><img src="images/lobby-berlin.png" alt="Saubere Bürolobby Berlin" loading="lazy"></div>
+    <div class="photo-item">
+      <picture>
+        <source srcset="images/praxis-berlin.webp" type="image/webp">
+        <img src="images/praxis-berlin.png" alt="Saubere Arztpraxis Berlin" loading="lazy" width="541" height="406">
+      </picture>
+    </div>
+    <div class="photo-item">
+      <picture>
+        <source srcset="images/office-berlin.webp" type="image/webp">
+        <img src="images/office-berlin.png" alt="Sauberes Büro Berlin" loading="lazy" width="541" height="406">
+      </picture>
+    </div>
+    <div class="photo-item">
+      <picture>
+        <source srcset="images/lobby-berlin.webp" type="image/webp">
+        <img src="images/lobby-berlin.png" alt="Saubere Bürolobby Berlin" loading="lazy" width="541" height="406">
+      </picture>
+    </div>
   </div>
 </section>
 
@@ -917,7 +935,7 @@
   <div class="foot-in">
     <address style="font-style:normal;">© 2026 LAK Cleaning Service · <span>Kurfürstendamm 14, 10719 Berlin</span></address>
     <span>
-      <a href="tel:+491731516837">+49 173 1516837</a> ·
+      <a href="tel:+491731516837" aria-label="Direkt anrufen: +49 173 1516837">+49 173 1516837</a> ·
       <a href="mailto:info@lak-cleaningservice.de">info@lak-cleaningservice.de</a>
     </span>
     <span>
@@ -1003,7 +1021,7 @@
   <div class="cookie-in">
     <div class="cookie-txt">
       <strong>🍪 Diese Website verwendet Cookies</strong>
-      <p>Wir nutzen technisch notwendige Cookies für den Betrieb der Website. Mit Ihrer Zustimmung nutzen wir auch Statistik- und Marketing-Cookies, um unser Angebot zu verbessern. Weitere Informationen finden Sie in unserer <a onclick="openM('datenschutz');return false;">Datenschutzerklärung</a>.</p>
+      <p>Wir nutzen technisch notwendige Cookies für den Betrieb der Website. Mit Ihrer Zustimmung nutzen wir auch Statistik- und Marketing-Cookies, um unser Angebot zu verbessern. Weitere Informationen finden Sie in unserer <a href="#datenschutz" onclick="openM('datenschutz');return false;">Datenschutzerklärung</a>.</p>
     </div>
     <div class="cookie-btns">
       <button class="ck-cfg" onclick="openCkSet()">Einstellungen</button>
