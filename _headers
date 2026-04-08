@@ -1,0 +1,20 @@
+# Cloudflare / CDN Cache-Regeln
+/gebaeudereinigung-berlin/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/gebaeudereinigung-berlin/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/gebaeudereinigung-berlin/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/gebaeudereinigung-berlin/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/gebaeudereinigung-berlin/index.html
+  Cache-Control: public, max-age=3600, must-revalidate
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  Referrer-Policy: strict-origin-when-cross-origin

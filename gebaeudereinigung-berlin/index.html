@@ -11,6 +11,11 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Security: X-Frame-Options via Meta (Clickjacking-Schutz) -->
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <!-- CSP: erlaubt nur vertrauenswürdige Quellen -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.bunny.net; font-src https://fonts.bunny.net; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://web3forms.com https://wa.me; frame-src 'none'; object-src 'none';" />
   <title>Gebäudereinigung Berlin – Keine wechselnden Reinigungskräfte | LAK Cleaning Service</title>
   <meta name="description" content="Professionelle Gebäudereinigung in Berlin für Büros, Praxen und Gewerbeobjekte. Feste Teams, direkte Ansprechpartnerin, Angebot in 24h. Jetzt anfragen." />
   <link rel="canonical" href="https://www.lak-cleaningservice.de/gebaeudereinigung-berlin" />
@@ -101,9 +106,18 @@
   </script>
 
   <style>
+    /* Fallback-Font mit Inter-ähnlichen Metriken → verhindert CLS beim Schriftladen */
+    @font-face {
+      font-family: 'Inter Fallback';
+      src: local('Arial');
+      size-adjust: 96%;
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+    }
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { font-family:'Inter','Segoe UI',Arial,sans-serif; color:#0F172A; background:#fff; font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+    body { font-family:'Inter','Inter Fallback','Segoe UI',Arial,sans-serif; color:#0F172A; background:#fff; font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
 
     :root {
       --navy:   #0F2548;
@@ -180,7 +194,7 @@
     .hero-micro { font-size:.74rem; color:rgba(255,255,255,.65); }
 
     /* proof card */
-    .proof { background:#fff; border-radius:var(--rl); padding:28px 24px; box-shadow:0 24px 64px rgba(0,0,0,.25); }
+    .proof { background:#fff; border-radius:var(--rl); padding:28px 24px; box-shadow:0 24px 64px rgba(0,0,0,.25); min-height:380px; contain:layout; }
     .proof-live { display:flex; align-items:center; gap:8px; padding-bottom:16px; border-bottom:1px solid var(--border); margin-bottom:18px; }
     .proof-dot { width:8px; height:8px; background:#22C55E; border-radius:50%; animation:blink 1.6s infinite; flex-shrink:0; }
     @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
