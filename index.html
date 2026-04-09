@@ -74,7 +74,7 @@
   <!-- LOADER -->
   <div class="loader" id="loader">
     <div class="loader-inner">
-      <img src="logo.webp" alt="LAK Cleaning Service" class="loader-logo-img" />
+      <img src="logo-400.jpg" alt="LAK Cleaning Service" class="loader-logo-img" fetchpriority="high" width="400" height="400" />
       <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
     </div>
   </div>
@@ -83,7 +83,7 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <img src="logo.webp" alt="LAK Cleaning Service Logo" class="nav-logo-img" />
+        <img src="logo-400.jpg" alt="LAK Cleaning Service Logo" class="nav-logo-img" width="400" height="400" />
       </a>
       <ul class="nav-links">
         <li class="nav-dropdown">
@@ -442,7 +442,11 @@
       <div class="about-visual reveal-left">
         <div class="about-photos">
           <div class="photo-main">
-            <img src="owner-full.webp" alt="Linda Akuamoah, Inhaberin LAK Cleaning Service Berlin" />
+            <img src="owner-full-800.jpg"
+                 srcset="owner-full-800.jpg 800w, owner-full.jpg 2953w"
+                 sizes="(max-width: 768px) 100vw, 50vw"
+                 alt="Linda Akuamoah, Inhaberin LAK Cleaning Service Berlin"
+                 width="800" height="1200" />
           </div>
           <div class="photo-secondary">
             <img src="owner-portrait.webp" alt="Linda Akuamoah – Zufriedenheitsgarantie LAK Cleaning Service" />
@@ -588,7 +592,7 @@
             <div style="width:100%;height:100%;border-radius:36px;overflow:hidden;background:#000;">
               <video
                 id="siteVideo"
-                autoplay muted loop playsinline
+                autoplay muted loop playsinline preload="metadata"
                 style="width:100%;height:100%;object-fit:cover;display:block;"
                 poster="">
                 <source src="reinigungsservice-berlin-video.mp4" type="video/mp4">
@@ -1066,7 +1070,11 @@
         </div>
         <!-- Owner photo in contact section -->
         <div class="kontakt-owner-photo">
-          <img src="owner-closeup.webp" alt="Linda Akuamoah – Inhaberin LAK Cleaning Service" />
+          <img src="owner-closeup-300.jpg"
+               srcset="owner-closeup-300.jpg 300w, owner-closeup.jpg 3016w"
+               sizes="(max-width: 768px) 120px, 150px"
+               alt="Linda Akuamoah – Inhaberin LAK Cleaning Service"
+               width="300" height="450" />
           <div class="owner-caption">
             <strong>Linda Akuamoah</strong>
             <span>Inhaberin · LAK Cleaning Service</span>
@@ -1122,8 +1130,8 @@
             <input type="tel" name="telefon" placeholder="+49 173 1516837" />
           </div>
           <div class="form-group">
-            <label>Gewünschte Leistung</label>
-            <select name="leistung">
+            <label for="leistung">Gewünschte Leistung</label>
+            <select name="leistung" id="leistung">
               <option value="">Bitte wählen…</option>
               <option>Büroreinigung</option>
               <option>Unterhaltsreinigung</option>
@@ -1161,7 +1169,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="#" class="nav-logo footer-logo-link">
-          <img src="logo.webp" alt="LAK Cleaning Service" class="footer-logo-img" />
+          <img src="logo-400.jpg" alt="LAK Cleaning Service" class="footer-logo-img" width="400" height="400" />
         </a>
         <p>Reinigung für Firmen in Berlin, die klare Abläufe, feste Ansprechpartner und verlässliche Qualität wollen. Saubere Ergebnisse. Klare Abläufe.</p>
       </div>

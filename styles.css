@@ -484,7 +484,7 @@ input, textarea, select, button { font-family: inherit; }
 .service-card p { color: var(--gray-2); font-size: 0.875rem; line-height: 1.65; margin-bottom: 20px; }
 .service-features { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
 .service-features span {
-  font-size: 0.8rem; color: var(--gray-3);
+  font-size: 0.8rem; color: var(--gray-2);
   display: flex; align-items: center; gap: 8px;
 }
 .service-features span::before {

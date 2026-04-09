@@ -89,8 +89,10 @@
   let W, H, particles = [];
 
   const resize = () => {
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
+    const w = canvas.offsetWidth;
+    const h = canvas.offsetHeight;
+    W = canvas.width  = w;
+    H = canvas.height = h;
   };
   resize();
   window.addEventListener('resize', resize, { passive: true });
