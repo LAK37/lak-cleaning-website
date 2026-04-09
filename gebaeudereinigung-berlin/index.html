@@ -11,11 +11,10 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Security: X-Frame-Options via Meta (Clickjacking-Schutz) -->
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <!-- Security: X-Content-Type-Options (X-Frame-Options nur per HTTP-Header → Cloudflare) -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <!-- CSP: erlaubt nur vertrauenswürdige Quellen -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.bunny.net; font-src https://fonts.bunny.net; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://web3forms.com https://wa.me; frame-src 'none'; object-src 'none';" />
+  <!-- CSP: erweitert um Google Ads Domains -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://www.googleadservices.com; style-src 'self' 'unsafe-inline' https://fonts.bunny.net; font-src https://fonts.bunny.net; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://web3forms.com https://wa.me https://pagead2.googlesyndication.com https://www.googleadservices.com https://www.google.com https://www.google.de; frame-src 'none'; object-src 'none';" />
   <title>Gebäudereinigung Berlin – Keine wechselnden Reinigungskräfte | LAK Cleaning Service</title>
   <meta name="description" content="Professionelle Gebäudereinigung in Berlin für Büros, Praxen und Gewerbeobjekte. Feste Teams, direkte Ansprechpartnerin, Angebot in 24h. Jetzt anfragen." />
   <link rel="canonical" href="https://www.lak-cleaningservice.de/gebaeudereinigung-berlin" />
