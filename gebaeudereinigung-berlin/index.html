@@ -566,13 +566,19 @@
   <div class="photo-grid">
     <div class="photo-item">
       <picture>
-        <source srcset="images/praxis-berlin.webp" type="image/webp">
+        <source
+          srcset="images/praxis-berlin-360.webp 360w, images/praxis-berlin-600.webp 600w, images/praxis-berlin.webp 1000w"
+          sizes="(max-width:640px) 90vw, 541px"
+          type="image/webp">
         <img src="images/praxis-berlin.png" alt="Saubere Arztpraxis Berlin" loading="lazy" width="541" height="406">
       </picture>
     </div>
     <div class="photo-item">
       <picture>
-        <source srcset="images/office-berlin.webp" type="image/webp">
+        <source
+          srcset="images/office-berlin-360.webp 360w, images/office-berlin-600.webp 600w, images/office-berlin.webp 1000w"
+          sizes="(max-width:640px) 90vw, 541px"
+          type="image/webp">
         <img src="images/office-berlin.png" alt="Sauberes Büro Berlin" loading="lazy" width="541" height="406">
       </picture>
     </div>
