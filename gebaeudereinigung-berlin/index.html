@@ -583,7 +583,10 @@
     </div>
     <div class="photo-item">
       <picture>
-        <source srcset="images/lobby-berlin.webp" type="image/webp">
+        <source
+          srcset="images/lobby-berlin-360.webp 360w, images/lobby-berlin-600.webp 600w, images/lobby-berlin.webp 1000w"
+          sizes="(max-width:640px) 90vw, 541px"
+          type="image/webp">
         <img src="images/lobby-berlin.png" alt="Saubere Bürolobby Berlin" loading="lazy" width="541" height="406">
       </picture>
     </div>
