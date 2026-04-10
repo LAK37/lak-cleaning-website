@@ -1317,7 +1317,7 @@ input, textarea, select, button { font-family: inherit; }
 }
 .vergleich-label-other {
   background: rgba(255,255,255,0.06);
-  color: #C0CAD8;
+  color: #ffffff;
 }
 .vergleich-label-us {
   background: var(--gold-dim);

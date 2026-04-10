@@ -4,6 +4,28 @@
 
 'use strict';
 
+/* ── 0. VIDEO LAZY LOAD ───────────────────────────────────── */
+(function initVideoLazyLoad() {
+  const video = document.getElementById('siteVideo');
+  if (!video) return;
+  const src = video.dataset.src;
+  if (!src) return;
+
+  const observer = new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting) {
+      const source = document.createElement('source');
+      source.src = src;
+      source.type = 'video/mp4';
+      video.appendChild(source);
+      video.load();
+      video.play().catch(function() {});
+      observer.disconnect();
+    }
+  }, { threshold: 0.1 });
+
+  observer.observe(video);
+})();
+
 /* ── 1. LOADER ────────────────────────────────────────────── */
 (function initLoader() {
   const loader = document.getElementById('loader');

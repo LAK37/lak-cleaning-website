@@ -63,8 +63,8 @@
   }
   </script>
   <!-- Google Fonts werden erst nach Cookie-Zustimmung geladen (DSGVO) -->
-  <link rel="stylesheet" href="styles.css?v=7" />
-  <link rel="preload" href="main.js?v=4" as="script" />
+  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="preload" href="main.js?v=5" as="script" />
 </head>
 <body>
 
@@ -75,7 +75,7 @@
   <!-- LOADER -->
   <div class="loader" id="loader">
     <div class="loader-inner">
-      <img src="logo-400.jpg" alt="LAK Cleaning Service" class="loader-logo-img" fetchpriority="high" width="400" height="400" />
+      <img src="logo-90.jpg" alt="LAK Cleaning Service" class="loader-logo-img" fetchpriority="high" width="90" height="90" />
       <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
     </div>
   </div>
@@ -84,7 +84,7 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <img src="logo-400.jpg" alt="LAK Cleaning Service Logo" class="nav-logo-img" width="400" height="400" />
+        <img src="logo-90.jpg" alt="LAK Cleaning Service Logo" class="nav-logo-img" width="90" height="90" />
       </a>
       <ul class="nav-links">
         <li class="nav-dropdown">
@@ -452,8 +452,8 @@
       <div class="about-visual reveal-left">
         <div class="about-photos">
           <div class="photo-main">
-            <img src="owner-full-800.jpg"
-                 srcset="owner-full-800.jpg 800w, owner-full.jpg 2953w"
+            <img src="owner-full-400.jpg"
+                 srcset="owner-full-400.jpg 400w, owner-full-800.jpg 800w, owner-full.jpg 2953w"
                  sizes="(max-width: 768px) 100vw, 50vw"
                  alt="Linda Akuamoah, Inhaberin LAK Cleaning Service Berlin"
                  width="800" height="1200" />
@@ -606,10 +606,10 @@
             <div style="width:100%;height:100%;border-radius:36px;overflow:hidden;background:#000;">
               <video
                 id="siteVideo"
-                autoplay muted loop playsinline preload="none"
+                muted loop playsinline preload="none"
+                data-src="reinigungsservice-berlin-video.mp4"
                 style="width:100%;height:100%;object-fit:cover;display:block;"
                 poster="">
-                <source src="reinigungsservice-berlin-video.mp4" type="video/mp4">
               </video>
               <!-- Ton-Button -->
               <button id="videoSoundBtn" onclick="
@@ -1084,8 +1084,8 @@
         </div>
         <!-- Owner photo in contact section -->
         <div class="kontakt-owner-photo">
-          <img src="owner-closeup-300.jpg"
-               srcset="owner-closeup-300.jpg 300w, owner-closeup.jpg 3016w"
+          <img src="owner-closeup-150.jpg"
+               srcset="owner-closeup-150.jpg 150w, owner-closeup-300.jpg 300w, owner-closeup.jpg 3016w"
                sizes="(max-width: 768px) 120px, 150px"
                alt="Linda Akuamoah – Inhaberin LAK Cleaning Service"
                width="300" height="450" />
@@ -1185,7 +1185,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="#" class="nav-logo footer-logo-link">
-          <img src="logo-400.jpg" alt="LAK Cleaning Service" class="footer-logo-img" width="400" height="400" />
+          <img src="logo-90.jpg" alt="LAK Cleaning Service" class="footer-logo-img" width="90" height="90" />
         </a>
         <p>Reinigung für Firmen in Berlin, die klare Abläufe, feste Ansprechpartner und verlässliche Qualität wollen. Saubere Ergebnisse. Klare Abläufe.</p>
       </div>
@@ -1255,7 +1255,7 @@
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
       <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.117 1.523 5.847L.057 23.882a.5.5 0 00.61.61l6.035-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.956 0-3.784-.573-5.322-1.559l-.364-.23-3.743.909.909-3.743-.23-.364A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
     </svg>
-    <span class="whatsapp-label">WhatsApp</span>
+    <span class="whatsapp-label" aria-hidden="true">WhatsApp</span>
   </a>
 
   <!-- COOKIE BANNER -->
@@ -1272,7 +1272,7 @@
     </div>
   </div>
 
-  <script src="main.js?v=4"></script>
+  <script src="main.js?v=5"></script>
   <script>
     /* ── SCROLL TO TOP ─────────────────────────────────────── */
     const scrollTopBtn = document.getElementById('scrollTopBtn');
