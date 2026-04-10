@@ -332,7 +332,11 @@
 
         <div class="service-card reveal-up" data-delay="0">
           <div class="service-img">
-            <img src="glasreinigung-berlin-buero.webp" alt="Modernes Büro mit Glaswänden – professionelle Büroreinigung in Berlin" loading="lazy" />
+            <img src="glasreinigung-berlin-buero.webp"
+                 srcset="glasreinigung-berlin-buero-400.webp 400w, glasreinigung-berlin-buero.webp 640w"
+                 sizes="(max-width: 768px) 100vw, 400px"
+                 alt="Modernes Büro mit Glaswänden – professionelle Büroreinigung in Berlin"
+                 loading="lazy" width="640" height="400" />
           </div>
           <div class="service-icon-wrap">
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -350,7 +354,11 @@
         <div class="service-card featured reveal-up" data-delay="100">
           <div class="featured-badge">Beliebt</div>
           <div class="service-img">
-            <img src="unterhaltsreinigung-berlin-reinigungsteam.webp" alt="Große Halle wird gereinigt – Unterhaltsreinigung in Berlin" loading="lazy" />
+            <img src="unterhaltsreinigung-berlin-reinigungsteam.webp"
+                 srcset="unterhaltsreinigung-berlin-reinigungsteam-400.webp 400w, unterhaltsreinigung-berlin-reinigungsteam.webp 549w"
+                 sizes="(max-width: 768px) 100vw, 400px"
+                 alt="Große Halle wird gereinigt – Unterhaltsreinigung in Berlin"
+                 loading="lazy" width="549" height="343" />
           </div>
           <div class="service-icon-wrap">
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0H5m14 0h-4m-6 0H5m0 0H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21v-4a2 2 0 012-2h2a2 2 0 012 2v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -450,7 +458,11 @@
                  width="800" height="1200" />
           </div>
           <div class="photo-secondary">
-            <img src="owner-portrait.webp" alt="Linda Akuamoah – Zufriedenheitsgarantie LAK Cleaning Service" />
+            <img src="owner-portrait.webp"
+                 srcset="owner-portrait-300.webp 300w, owner-portrait.webp 960w"
+                 sizes="(max-width: 768px) 100vw, 300px"
+                 alt="Linda Akuamoah – Zufriedenheitsgarantie LAK Cleaning Service"
+                 width="300" height="375" />
           </div>
         </div>
         <div class="about-accent-line"></div>
@@ -1110,25 +1122,25 @@
 
           <div class="form-row">
             <div class="form-group">
-              <label>Vorname</label>
-              <input type="text" name="vorname" placeholder="Max" required />
+              <label for="vorname">Vorname</label>
+              <input type="text" id="vorname" name="vorname" placeholder="Max" required />
             </div>
             <div class="form-group">
-              <label>Nachname</label>
-              <input type="text" name="nachname" placeholder="Mustermann" required />
+              <label for="nachname">Nachname</label>
+              <input type="text" id="nachname" name="nachname" placeholder="Mustermann" required />
             </div>
           </div>
           <div class="form-group">
-            <label>Unternehmen</label>
-            <input type="text" name="unternehmen" placeholder="Musterfirma GmbH" />
+            <label for="unternehmen">Unternehmen</label>
+            <input type="text" id="unternehmen" name="unternehmen" placeholder="Musterfirma GmbH" />
           </div>
           <div class="form-group">
-            <label>E-Mail</label>
-            <input type="email" name="email" placeholder="max@musterfirma.de" required />
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" placeholder="max@musterfirma.de" required />
           </div>
           <div class="form-group">
-            <label>Telefon</label>
-            <input type="tel" name="telefon" placeholder="+49 173 1516837" />
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="+49 173 1516837" />
           </div>
           <div class="form-group">
             <label for="leistung">Gewünschte Leistung</label>
@@ -1144,8 +1156,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Ihre Nachricht</label>
-            <textarea name="nachricht" placeholder="Beschreiben Sie Ihren Bedarf, Fläche, gewünschte Intervalle…" rows="4"></textarea>
+            <label for="nachricht">Ihre Nachricht</label>
+            <textarea id="nachricht" name="nachricht" placeholder="Beschreiben Sie Ihren Bedarf, Fläche, gewünschte Intervalle…" rows="4"></textarea>
           </div>
           <button type="submit" class="btn-primary btn-full" id="submitBtn">
             <span>Angebot anfordern</span>

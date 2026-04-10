@@ -1,0 +1,79 @@
+# ── KOMPRIMIERUNG ──────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# ── CACHE-LEBENSDAUER ──────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML – kurz (Inhalt ändert sich)
+  ExpiresByType text/html                  "access plus 1 hour"
+
+  # Bilder – 1 Jahr (versioniert über Dateiname)
+  ExpiresByType image/webp                 "access plus 1 year"
+  ExpiresByType image/jpeg                 "access plus 1 year"
+  ExpiresByType image/png                  "access plus 1 year"
+  ExpiresByType image/gif                  "access plus 1 year"
+  ExpiresByType image/svg+xml              "access plus 1 year"
+  ExpiresByType image/x-icon               "access plus 1 year"
+  ExpiresByType video/mp4                  "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/woff2                 "access plus 1 year"
+  ExpiresByType font/woff                  "access plus 1 year"
+  ExpiresByType application/font-woff2     "access plus 1 year"
+
+  # CSS & JS
+  ExpiresByType text/css                   "access plus 1 year"
+  ExpiresByType application/javascript     "access plus 1 year"
+  ExpiresByType text/javascript            "access plus 1 year"
+</IfModule>
+
+# Cache-Control-Header zusätzlich setzen
+<IfModule mod_headers.c>
+  # Bilder & Video
+  <FilesMatch "\.(webp|jpg|jpeg|png|gif|ico|svg|mp4)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # Fonts
+  <FilesMatch "\.(woff2|woff|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # CSS & JS
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # HTML
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ── SICHERHEITS-HEADER ─────────────────────────────────────────
+<IfModule mod_headers.c>
+  # Clickjacking verhindern
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # XSS-Schutz
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Referrer Policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # HSTS – HTTPS erzwingen (1 Jahr)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+  # Cross-Origin Opener Policy
+  Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+
+  # Permissions Policy
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# ── HTTPS-WEITERLEITUNG ────────────────────────────────────────
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
