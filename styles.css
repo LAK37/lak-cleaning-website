@@ -930,7 +930,8 @@ input, textarea, select, button { font-family: inherit; }
 
 /* ── WHATSAPP FAB ────────────────────────────────────────── */
 .whatsapp-fab {
-  position: fixed; bottom: 32px; right: 32px; z-index: 2100;
+  position: fixed; bottom: 120px; right: 32px; z-index: 2100;
+  min-height: 48px;
   display: flex; align-items: center; gap: 10px;
   background: #25D366; color: #fff;
   border-radius: 99px; padding: 14px 20px;
@@ -975,18 +976,20 @@ input, textarea, select, button { font-family: inherit; }
 .cookie-text a { color: var(--gold); text-decoration: underline; pointer-events: auto; position: relative; z-index: 2001; }
 .cookie-actions { display: flex; gap: 12px; flex-shrink: 0; }
 .cookie-decline {
-  padding: 9px 20px; border-radius: 99px;
+  padding: 12px 20px; border-radius: 99px;
   border: 1px solid var(--border);
   background: none; color: var(--gray-2);
   font-size: 0.85rem; font-weight: 600; cursor: pointer;
+  min-height: 48px;
   transition: border-color 0.2s, color 0.2s;
 }
 .cookie-decline:hover { border-color: var(--gray-2); color: var(--white); }
 .cookie-accept {
-  padding: 9px 20px; border-radius: 99px;
+  padding: 12px 20px; border-radius: 99px;
   border: none;
   background: linear-gradient(135deg, var(--gold), var(--gold-light));
   color: #000; font-size: 0.85rem; font-weight: 700; cursor: pointer;
+  min-height: 48px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .cookie-accept:hover { transform: translateY(-2px); box-shadow: var(--shadow-gold); }
