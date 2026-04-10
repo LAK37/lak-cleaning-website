@@ -63,7 +63,8 @@
   }
   </script>
   <!-- Google Fonts werden erst nach Cookie-Zustimmung geladen (DSGVO) -->
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="preload" href="main.js?v=4" as="script" />
 </head>
 <body>
 
@@ -605,7 +606,7 @@
             <div style="width:100%;height:100%;border-radius:36px;overflow:hidden;background:#000;">
               <video
                 id="siteVideo"
-                autoplay muted loop playsinline preload="metadata"
+                autoplay muted loop playsinline preload="none"
                 style="width:100%;height:100%;object-fit:cover;display:block;"
                 poster="">
                 <source src="reinigungsservice-berlin-video.mp4" type="video/mp4">
@@ -675,7 +676,7 @@
       </div>
       <div class="process-steps">
         <div class="process-step reveal-up" data-delay="0">
-          <div class="step-number">01</div>
+          <div class="step-number" aria-hidden="true">01</div>
           <div class="step-content">
             <h3>Anfrage senden</h3>
             <p>Kontaktformular, Telefon oder WhatsApp. Rückmeldung innerhalb von 24 Stunden.</p>
@@ -683,7 +684,7 @@
           <div class="step-arrow"><svg width="40" height="14" viewBox="0 0 40 14" fill="none"><path d="M0 7h38M33 1l6 6-6 6" stroke="#C9973A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
         <div class="process-step reveal-up" data-delay="150">
-          <div class="step-number">02</div>
+          <div class="step-number" aria-hidden="true">02</div>
           <div class="step-content">
             <h3>Besichtigung vor Ort</h3>
             <p>Wir schauen uns Ihr Objekt an. Aufwand und Anforderungen werden direkt geprüft.</p>
@@ -691,7 +692,7 @@
           <div class="step-arrow"><svg width="40" height="14" viewBox="0 0 40 14" fill="none"><path d="M0 7h38M33 1l6 6-6 6" stroke="#C9973A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
         <div class="process-step reveal-up" data-delay="300">
-          <div class="step-number">03</div>
+          <div class="step-number" aria-hidden="true">03</div>
           <div class="step-content">
             <h3>Angebot erhalten</h3>
             <p>Klar und transparent. Keine versteckten Kosten, kein Kleingedrucktes.</p>
@@ -699,7 +700,7 @@
           <div class="step-arrow"><svg width="40" height="14" viewBox="0 0 40 14" fill="none"><path d="M0 7h38M33 1l6 6-6 6" stroke="#C9973A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
         <div class="process-step reveal-up" data-delay="450">
-          <div class="step-number">04</div>
+          <div class="step-number" aria-hidden="true">04</div>
           <div class="step-content">
             <h3>Start der Reinigung</h3>
             <p>Feste Teams, klare Abläufe, gleichbleibende Qualität. Ab dem ersten Tag.</p>
@@ -1271,7 +1272,7 @@
     </div>
   </div>
 
-  <script src="main.js?v=3"></script>
+  <script src="main.js?v=4"></script>
   <script>
     /* ── SCROLL TO TOP ─────────────────────────────────────── */
     const scrollTopBtn = document.getElementById('scrollTopBtn');

@@ -88,14 +88,16 @@
   const ctx = canvas.getContext('2d');
   let W, H, particles = [];
 
-  const resize = () => {
-    const w = canvas.offsetWidth;
-    const h = canvas.offsetHeight;
+  const resize = (w, h) => {
     W = canvas.width  = w;
     H = canvas.height = h;
   };
-  resize();
-  window.addEventListener('resize', resize, { passive: true });
+
+  const ro = new ResizeObserver(entries => {
+    const { width, height } = entries[0].contentRect;
+    resize(width, height);
+  });
+  ro.observe(canvas);
 
   class Particle {
     constructor() { this.reset(); }
