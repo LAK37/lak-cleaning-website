@@ -495,6 +495,21 @@ console.log('%c LAK Cleaning Service — Premium Website ', 'background:#C9973A;
 
   emailInput.addEventListener('input', clearEmailError);
 
+  /* Leistung aus URL-Parameter vorauswählen (?leistung=Treppenhausreinigung) */
+  (function preSelectLeistung() {
+    const params = new URLSearchParams(window.location.search);
+    const leistung = params.get('leistung');
+    if (!leistung) return;
+    const select = document.getElementById('leistung');
+    if (!select) return;
+    for (let i = 0; i < select.options.length; i++) {
+      if (select.options[i].value === leistung || select.options[i].text === leistung) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+  })();
+
   form.addEventListener('submit', function(e) {
     const email  = emailInput.value.trim().toLowerCase();
     const domain = email.split('@')[1] || '';
