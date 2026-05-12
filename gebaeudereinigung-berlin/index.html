@@ -1208,7 +1208,7 @@
       document.getElementById('formSuccess').style.display = 'none';
       document.getElementById('formError').style.display = 'none';
       try {
-        const data = new FormData(form);
+        const data = new FormData(form); data.append('redirect', 'false');
         const res = await fetch('https://api.web3forms.com/submit', { method:'POST', body:data });
         const json = await res.json();
         if(json.success){
