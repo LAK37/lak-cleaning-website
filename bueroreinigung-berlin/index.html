@@ -2233,11 +2233,10 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     var r = await fetch('https://api.web3forms.com/submit',{method:'POST',body:d});
     var j = await r.json();
     if(j.success){
-      this.style.display='none';
-      document.getElementById('form-success').style.display='block';
       if(typeof gtag==='function'){
         gtag('event','generate_lead',{event_category:'form',event_label:'bueroreinigung-berlin'});
       }
+      window.location.href = 'danke.html';
     } else {
       btn.disabled=false; btn.textContent='Jetzt unverbindlich anfragen';
       alert('Fehler. Bitte erneut versuchen oder per WhatsApp schreiben.');
