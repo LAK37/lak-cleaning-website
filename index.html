@@ -269,7 +269,7 @@
       </a>
       <ul class="nav-links">
         <li class="nav-dropdown">
-          <a href="leistungen.html" class="nav-link">Leistungen</a>
+          <a href="leistungen.html" class="nav-link" data-action="view_services" data-context="navigation" data-resource-type="page">Leistungen</a>
           <div class="nav-dropdown-menu">
             <a href="buero-reinigung-berlin.html"><span class="dd-dot"></span>Büroreinigung Berlin</a>
             <a href="unterhaltsreinigung-berlin.html"><span class="dd-dot"></span>Unterhaltsreinigung Berlin</a>
@@ -279,12 +279,12 @@
             <a href="buerocontainer-reinigung-berlin.html"><span class="dd-dot"></span>Bürocontainer-Reinigung</a>
           </div>
         </li>
-        <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
-        <li><a href="#bewertungen" class="nav-link">Bewertungen</a></li>
-        <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+        <li><a href="ueber-uns.html" class="nav-link" data-action="view_about_us" data-context="navigation" data-resource-type="page">Über uns</a></li>
+        <li><a href="#bewertungen" class="nav-link" data-action="view_reviews" data-context="navigation" data-resource-type="review">Bewertungen</a></li>
+        <li><a href="#kontakt" class="nav-link" data-action="contact_support" data-context="navigation" data-resource-type="organization">Kontakt</a></li>
       </ul>
       <a href="index-en.html" class="lang-switch">EN</a>
-      <a href="#kontakt" class="nav-cta">Angebot anfordern</a>
+      <a href="#kontakt" class="nav-cta" data-action="request_quote" data-context="navigation" data-resource-type="service">Angebot anfordern</a>
       <button class="nav-burger" id="navBurger" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
       </button>
@@ -299,10 +299,10 @@
           <a href="treppenhausreinigung-berlin.html">→ Treppenhausreinigung Berlin</a>
           <a href="buerocontainer-reinigung-berlin.html">→ Bürocontainer-Reinigung</a>
         </li>
-        <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
-        <li><a href="#bewertungen" class="nav-link">Bewertungen</a></li>
-        <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
-        <li><a href="#kontakt" class="nav-cta" style="display:inline-block;margin-top:8px;">Angebot anfordern</a></li>
+        <li><a href="ueber-uns.html" class="nav-link" data-action="view_about_us" data-context="navigation" data-resource-type="page">Über uns</a></li>
+        <li><a href="#bewertungen" class="nav-link" data-action="view_reviews" data-context="navigation" data-resource-type="review">Bewertungen</a></li>
+        <li><a href="#kontakt" class="nav-link" data-action="contact_support" data-context="navigation" data-resource-type="organization">Kontakt</a></li>
+        <li><a href="#kontakt" class="nav-cta" style="display:inline-block;margin-top:8px;" data-action="request_quote" data-context="navigation" data-resource-type="service">Angebot anfordern</a></li>
         <li><a href="index-en.html" class="lang-switch" style="display:inline-block;margin-top:8px;">🌐 English</a></li>
       </ul>
     </div>
@@ -1294,7 +1294,7 @@
         </div>
       </div>
       <div class="kontakt-form-wrap reveal-right">
-        <form class="kontakt-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <form class="kontakt-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" data-action="submit_contact_form" data-context="contact" data-resource-type="service_request">
           <!-- Web3Forms -->
           <input type="hidden" name="access_key" value="d7dc346a-5b4d-4cce-aa56-3a0a9dcd03ac" />
           <input type="hidden" name="subject" value="Neue Anfrage – LAK Cleaning Service Berlin" />
@@ -1341,7 +1341,7 @@
             <label for="nachricht">Ihre Nachricht</label>
             <textarea id="nachricht" name="nachricht" placeholder="Beschreiben Sie Ihren Bedarf, Fläche, gewünschte Intervalle…" rows="4"></textarea>
           </div>
-          <button type="submit" class="btn-primary btn-full" id="submitBtn">
+          <button type="submit" class="btn-primary btn-full" id="submitBtn" data-action="submit_contact_form" data-context="contact" data-resource-type="service_request">
             <span>Angebot anfordern</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </button>
@@ -1373,42 +1373,42 @@
       <div class="footer-col">
         <h3>Leistungen</h3>
         <ul>
-          <li><a href="buero-reinigung-berlin.html">Büroreinigung</a></li>
-          <li><a href="unterhaltsreinigung-berlin.html">Unterhaltsreinigung</a></li>
-          <li><a href="buerocontainer-reinigung-berlin.html">Bürocontainer-Reinigung</a></li>
-          <li><a href="leistungen.html">Apartment-Reinigung</a></li>
-          <li><a href="treppenhausreinigung-berlin.html">Treppenhausreinigung</a></li>
-          <li><a href="glasreinigung-berlin.html">Glasreinigung</a></li>
+          <li><a href="buero-reinigung-berlin.html" data-action="view_services" data-context="footer" data-resource-type="service">Büroreinigung</a></li>
+          <li><a href="unterhaltsreinigung-berlin.html" data-action="view_services" data-context="footer" data-resource-type="service">Unterhaltsreinigung</a></li>
+          <li><a href="buerocontainer-reinigung-berlin.html" data-action="view_services" data-context="footer" data-resource-type="service">Bürocontainer-Reinigung</a></li>
+          <li><a href="leistungen.html" data-action="view_services" data-context="footer" data-resource-type="service">Apartment-Reinigung</a></li>
+          <li><a href="treppenhausreinigung-berlin.html" data-action="view_services" data-context="footer" data-resource-type="service">Treppenhausreinigung</a></li>
+          <li><a href="glasreinigung-berlin.html" data-action="view_services" data-context="footer" data-resource-type="service">Glasreinigung</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h3>Unternehmen</h3>
         <ul>
-          <li><a href="#ueber-uns">Über uns</a></li>
-          <li><a href="#prozess">Unser Prozess</a></li>
-          <li><a href="#bewertungen">Bewertungen</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
-          <li><a href="https://g.co/kgs/bfbQgi9" target="_blank" rel="noopener">Google Bewertungen</a></li>
+          <li><a href="#ueber-uns" data-action="view_about_us" data-context="footer" data-resource-type="page">Über uns</a></li>
+          <li><a href="#prozess" data-action="view_process" data-context="footer" data-resource-type="page">Unser Prozess</a></li>
+          <li><a href="#bewertungen" data-action="view_reviews" data-context="footer" data-resource-type="review">Bewertungen</a></li>
+          <li><a href="#kontakt" data-action="contact_support" data-context="footer" data-resource-type="organization">Kontakt</a></li>
+          <li><a href="https://g.co/kgs/bfbQgi9" target="_blank" rel="noopener" data-action="view_reviews" data-context="footer" data-resource-type="review">Google Bewertungen</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h3>Kontakt</h3>
         <ul>
-          <li><a href="tel:+491731516837">+49 173 1516837</a></li>
-          <li><a href="mailto:info@lak-cleaningservice.de">info@lak-cleaningservice.de</a></li>
+          <li><a href="tel:+491731516837" data-action="contact_support" data-context="footer" data-resource-type="organization">+49 173 1516837</a></li>
+          <li><a href="mailto:info@lak-cleaningservice.de" data-action="contact_support" data-context="footer" data-resource-type="organization">info@lak-cleaningservice.de</a></li>
           <li>Berlin & Umgebung</li>
           <li>Mo–Fr: 09:00–16:00 Uhr</li>
         </ul>
       </div>
     </div>
     <div class="footer-social">
-      <a href="https://www.instagram.com/lak_cleaning_service" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+      <a href="https://www.instagram.com/lak_cleaning_service" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon" data-action="view_social_profile" data-context="footer" data-resource-type="organization">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
       </a>
-      <a href="https://www.facebook.com/profile.php?id=100094130720438" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
+      <a href="https://www.facebook.com/profile.php?id=100094130720438" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon" data-action="view_social_profile" data-context="footer" data-resource-type="organization">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="https://www.linkedin.com/company/lak-cleaning-service/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+      <a href="https://www.linkedin.com/company/lak-cleaning-service/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon" data-action="view_social_profile" data-context="footer" data-resource-type="organization">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.8"/></svg>
       </a>
     </div>
@@ -1431,7 +1431,7 @@
 
   <!-- WHATSAPP FLOATING BUTTON -->
   <a href="https://wa.me/491731516837?text=Hallo%2C%20ich%20suche%20einen%20zuverl%C3%A4ssigen%20Reinigungsservice%20f%C3%BCr%20mein%20Objekt%20in%20Berlin.%0AK%C3%B6nnen%20Sie%20mir%20sagen%2C%20wie%20die%20Zusammenarbeit%20abl%C3%A4uft%20und%20was%20es%20kostet%3F"
-     target="_blank" rel="noopener" class="whatsapp-fab" id="whatsappFab" aria-label="WhatsApp kontaktieren">
+     target="_blank" rel="noopener" class="whatsapp-fab" id="whatsappFab" aria-label="WhatsApp kontaktieren" data-action="contact_support" data-context="whatsapp" data-resource-type="organization">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
       <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.117 1.523 5.847L.057 23.882a.5.5 0 00.61.61l6.035-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.956 0-3.784-.573-5.322-1.559l-.364-.23-3.743.909.909-3.743-.23-.364A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
