@@ -452,7 +452,7 @@
       margin-bottom: 36px;
     }
 
-    .hero-proof { display: flex; flex-direction: column; gap: 9px; }
+    .hero-proof { display: flex; flex-direction: column; gap: 9px; list-style: none; padding: 0; margin: 0; }
 
     .proof-row {
       display: flex;
@@ -622,47 +622,41 @@
     ================================================ */
     #compare { background: var(--white); }
 
-    .compare-header {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 0;
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
       margin-top: 52px;
       border: 1px solid var(--gray-200);
-      border-radius: var(--r) var(--r) 0 0;
+      border-radius: var(--r);
       overflow: hidden;
     }
 
-    .compare-header > div {
+    .compare-table th {
       padding: 16px 24px;
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
       font-size: 14px;
+      text-align: left;
     }
 
-    .compare-header .col-topic { background: var(--gray-900); color: rgba(255,255,255,.70); }
-    .compare-header .col-challenge { background: var(--gray-900); color: rgba(255,255,255,.50); text-align: center; }
-    .compare-header .col-lak { background: var(--green); color: #fff; text-align: center; }
+    .compare-table thead .col-topic { background: var(--gray-900); color: rgba(255,255,255,.70); }
+    .compare-table thead .col-challenge { background: var(--gray-900); color: rgba(255,255,255,.50); text-align: center; }
+    .compare-table thead .col-lak { background: var(--green); color: #fff; text-align: center; }
 
-    .compare-body { border: 1px solid var(--gray-200); border-top: none; border-radius: 0 0 var(--r) var(--r); overflow: hidden; }
-
-    .compare-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      border-bottom: 1px solid var(--gray-100);
-    }
-
-    .compare-row:last-child { border-bottom: none; }
-    .compare-row:nth-child(even) { background: var(--gray-50); }
-
-    .compare-row > div {
+    .compare-table td {
       padding: 14px 24px;
       font-size: 14px;
       color: var(--gray-700);
+      border-bottom: 1px solid var(--gray-100);
     }
 
-    .compare-row .col-topic { font-weight: 600; color: var(--gray-900); }
-    .compare-row .col-challenge { text-align: center; color: var(--gray-500); border-right: 1px solid var(--gray-100); }
-    .compare-row .col-lak { text-align: center; font-weight: 600; color: var(--green); }
+    .compare-table tbody tr:last-child td { border-bottom: none; }
+    .compare-table tbody tr:nth-child(even) td { background: var(--gray-50); }
+
+    .compare-table .col-topic { font-weight: 600; color: var(--gray-900); }
+    .compare-table td.col-challenge { text-align: center; color: var(--gray-500); border-right: 1px solid var(--gray-100); border-left: 1px solid var(--gray-100); }
+    .compare-table td.col-lak { text-align: center; font-weight: 600; color: var(--green); }
 
     /* ================================================
        USPs
@@ -1241,12 +1235,12 @@
       .testi-grid { grid-template-columns: 1fr; }
       .steps { grid-template-columns: 1fr 1fr; }
 
-      /* Compare-Tabelle scrollbar auf schmalen Screens */
-      /* Compare table: card grid layout on mobile */
+      /* Compare table: card grid layout auf Mobile */
       .compare-wrap { overflow-x: visible; }
-      .compare-header { display: none; }
-      .compare-body { border: none; border-radius: 0; background: transparent; margin-top: 32px; }
-      .compare-row {
+      .compare-table, .compare-table thead, .compare-table tbody, .compare-table tr, .compare-table th, .compare-table td { display: block; }
+      .compare-table { border: none; border-radius: 0; margin-top: 32px; }
+      .compare-table thead { display: none; }
+      .compare-table tbody tr {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
@@ -1256,25 +1250,27 @@
         overflow: hidden;
         background: #fff;
       }
-      .compare-row:nth-child(even) { background: #fff; }
-      .compare-row:last-child { border-bottom: 1px solid var(--gray-200); }
-      .compare-row .col-topic {
+      .compare-table tbody tr:nth-child(even) td { background: #fff; }
+      .compare-table tbody tr:last-child td { border-bottom: none; }
+      .compare-table td.col-topic {
         grid-column: 1 / -1;
         background: var(--gray-900);
         color: #fff;
         padding: 8px 14px;
         font-size: 13px;
         font-weight: 600;
+        border: none;
       }
-      .compare-row .col-challenge {
+      .compare-table td.col-challenge {
         padding: 8px 10px;
         font-size: 12px;
-        color: var(--gray-600);
+        color: var(--gray-500);
         background: #fdf8f8;
         border-right: 1px solid var(--gray-100);
+        border-left: none;
         text-align: left;
       }
-      .compare-row .col-challenge::before {
+      .compare-table td.col-challenge::before {
         content: "Andere Anbieter";
         display: block;
         font-size: 9px;
@@ -1284,7 +1280,7 @@
         text-transform: uppercase;
         letter-spacing: .05em;
       }
-      .compare-row .col-lak {
+      .compare-table td.col-lak {
         padding: 8px 10px;
         font-size: 12px;
         font-weight: 600;
@@ -1292,7 +1288,7 @@
         background: #f6faf7;
         text-align: left;
       }
-      .compare-row .col-lak::before {
+      .compare-table td.col-lak::before {
         content: "LAK";
         display: block;
         font-size: 9px;
@@ -1470,7 +1466,7 @@
         <p class="hero-h1-sub">Mit festen Teams und klaren Abläufen.</p>
 
         <p class="hero-sub">
-          Für Büros, Praxen und Gewerbeobjekte, die eine strukturierte und verlässliche Reinigungslösung suchen.
+          Für <a href="#leistungen" style="color:var(--green);text-decoration:none;" data-action="view_services" data-context="hero">Büros, Praxen und Gewerbeobjekte</a>, die eine strukturierte und verlässliche Reinigungslösung suchen.
         </p>
 
         <div class="hero-ctas">
@@ -1485,24 +1481,24 @@
           </a>
         </div>
 
-        <div class="hero-proof">
-          <div class="proof-row">
+        <ul class="hero-proof" aria-label="Ihre Vorteile auf einen Blick">
+          <li class="proof-row">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Feste Ansprechpartner
-          </div>
-          <div class="proof-row">
+          </li>
+          <li class="proof-row">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Flexible Reinigungszeiten
-          </div>
-          <div class="proof-row">
+          </li>
+          <li class="proof-row">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Rückmeldung in der Regel innerhalb von 24 h
-          </div>
-          <div class="proof-row">
+          </li>
+          <li class="proof-row">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Keine Mindestlaufzeit · 3 Monate Kündigungsfrist
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
 
       <div class="hero-visual">
@@ -1616,6 +1612,8 @@
       </div>
     </div>
 
+    <p class="prob-cta"><a href="#usps" style="color:var(--green);text-decoration:none;font-weight:600;" data-action="view_services" data-context="problem_section">So lösen wir diese Herausforderungen →</a></p>
+
   </div>
 </section>
 
@@ -1629,43 +1627,47 @@
     </div>
 
     <div class="compare-wrap">
-    <div class="compare-header">
-      <div class="col-topic">Kriterium</div>
-      <div class="col-challenge">Andere Anbieter</div>
-      <div class="col-lak">So arbeitet LAK</div>
-    </div>
-    <div class="compare-body" role="table" aria-label="Vergleich Reinigungsmerkmale">
-      <div class="compare-row">
-        <div class="col-topic">Preisstruktur</div>
-        <div class="col-challenge">Unklare oder wechselnde Preise</div>
-        <div class="col-lak">Transparente Preisvereinbarung</div>
-      </div>
-      <div class="compare-row">
-        <div class="col-topic">Ansprechpartner</div>
-        <div class="col-challenge">Wechselnde Kontaktpersonen</div>
-        <div class="col-lak">Feste Ansprechpartner</div>
-      </div>
-      <div class="compare-row">
-        <div class="col-topic">Team</div>
-        <div class="col-challenge">Häufig wechselnde Mitarbeiter</div>
-        <div class="col-lak">Feste Reinigungsteams</div>
-      </div>
-      <div class="compare-row">
-        <div class="col-topic">Terminabstimmung</div>
-        <div class="col-challenge">Kurzfristige Änderungen ohne Abstimmung</div>
-        <div class="col-lak">Abgestimmte Reinigungszeiten</div>
-      </div>
-      <div class="compare-row">
-        <div class="col-topic">Reaktionszeit</div>
-        <div class="col-challenge">Mehrere Tage Wartezeit</div>
-        <div class="col-lak">Antwort in 24h</div>
-      </div>
-      <div class="compare-row">
-        <div class="col-topic">Vertrag</div>
-        <div class="col-challenge">Feste Mindestlaufzeiten</div>
-        <div class="col-lak">Keine Mindestlaufzeit</div>
-      </div>
-    </div>
+    <table class="compare-table" aria-label="Vergleich Reinigungsmerkmale">
+      <thead>
+        <tr>
+          <th class="col-topic" scope="col">Kriterium</th>
+          <th class="col-challenge" scope="col">Andere Anbieter</th>
+          <th class="col-lak" scope="col">So arbeitet LAK</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-topic">Preisstruktur</td>
+          <td class="col-challenge">Unklare oder wechselnde Preise</td>
+          <td class="col-lak">Transparente Preisvereinbarung</td>
+        </tr>
+        <tr>
+          <td class="col-topic">Ansprechpartner</td>
+          <td class="col-challenge">Wechselnde Kontaktpersonen</td>
+          <td class="col-lak">Feste Ansprechpartner</td>
+        </tr>
+        <tr>
+          <td class="col-topic">Team</td>
+          <td class="col-challenge">Häufig wechselnde Mitarbeiter</td>
+          <td class="col-lak">Feste Reinigungsteams</td>
+        </tr>
+        <tr>
+          <td class="col-topic">Terminabstimmung</td>
+          <td class="col-challenge">Kurzfristige Änderungen ohne Abstimmung</td>
+          <td class="col-lak">Abgestimmte Reinigungszeiten</td>
+        </tr>
+        <tr>
+          <td class="col-topic">Reaktionszeit</td>
+          <td class="col-challenge">Mehrere Tage Wartezeit</td>
+          <td class="col-lak">Antwort in 24h</td>
+        </tr>
+        <tr>
+          <td class="col-topic">Vertrag</td>
+          <td class="col-challenge">Feste Mindestlaufzeiten</td>
+          <td class="col-lak">Keine Mindestlaufzeit</td>
+        </tr>
+      </tbody>
+    </table>
     </div><!-- /compare-wrap -->
   </div>
 </section>
@@ -1796,7 +1798,7 @@
       <div class="step">
         <div class="step-n" aria-label="Schritt 1">1</div>
         <h3>Anfrage senden</h3>
-        <p>Formular oder WhatsApp, in unter 2 Minuten.</p>
+        <p><a href="#kontakt" style="color:var(--green);text-decoration:none;" data-action="navigate_to_contact" data-context="ablauf">Formular</a> oder WhatsApp, in unter 2 Minuten.</p>
       </div>
       <div class="step">
         <div class="step-n" aria-label="Schritt 2">2</div>
