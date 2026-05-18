@@ -1,0 +1,51 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "LAK Cleaning Service",
+  "url": "https://www.lak-cleaningservice.de",
+  "logo": "https://www.lak-cleaningservice.de/logo.webp",
+  "description": "Professionelle Gebäudereinigung für Gewerbe in Berlin. Büroreinigung, Unterhaltsreinigung, Glasreinigung, Treppenhausreinigung. Feste Teams, persönliche Ansprechpartnerin, Angebot in 24 Stunden.",
+  "founder": {
+    "@type": "Person",
+    "name": "Linda Akuamoah",
+    "jobTitle": "Inhaberin"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+49-173-1516837",
+    "email": "info@lak-cleaningservice.de",
+    "contactType": "customer service",
+    "availableLanguage": ["de", "en"],
+    "hoursAvailable": "Mo-Fr 07:00-18:00"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kurfürstendamm 14",
+    "addressLocality": "Berlin",
+    "postalCode": "10719",
+    "addressCountry": "DE"
+  },
+  "areaServed": "Berlin",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "14",
+    "bestRating": "5"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Reinigungsleistungen Berlin",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Büroreinigung Berlin" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Unterhaltsreinigung Berlin" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Glasreinigung Berlin" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Treppenhausreinigung Berlin" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gebäudereinigung Berlin" } }
+    ]
+  },
+  "sameAs": [
+    "https://www.instagram.com/lak_cleaning_service/",
+    "https://www.facebook.com/lakcleaningservice",
+    "https://www.linkedin.com/company/lak-cleaning-service"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "LAK Cleaning Service Berlin",
+  "name_for_model": "lak_cleaning_service",
+  "description_for_human": "Professionelle Gebäudereinigung in Berlin – Büroreinigung, Unterhaltsreinigung, Glasreinigung. Angebot anfordern.",
+  "description_for_model": "LAK Cleaning Service bietet professionelle Gebäudereinigung für Gewerbe in Berlin an. Leistungen: Büroreinigung, Unterhaltsreinigung, Glasreinigung, Treppenhausreinigung. Inhaberin Linda Akuamoah. Telefon: +49 173 1516837. E-Mail: info@lak-cleaningservice.de. Adresse: Kurfürstendamm 14, 10719 Berlin. Bewertung: 5,0 Sterne (14 Google-Bewertungen). Angebot innerhalb von 24 Stunden.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://www.lak-cleaningservice.de/.well-known/openapi.yaml"
+  },
+  "logo_url": "https://www.lak-cleaningservice.de/logo.webp",
+  "contact_email": "info@lak-cleaningservice.de",
+  "legal_info_url": "https://www.lak-cleaningservice.de/impressum.html"
+}
