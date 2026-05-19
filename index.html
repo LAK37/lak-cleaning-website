@@ -32,7 +32,7 @@
     "name": "LAK Cleaning Service",
     "description": "Professionelle Gebäudereinigung für Gewerbe in Berlin – Büroreinigung, Unterhaltsreinigung, Glasreinigung, Treppenhausreinigung.",
     "url": "https://www.lak-cleaningservice.de",
-    "telephone": "+4917315168371",
+    "telephone": "+491731516837",
     "email": "info@lak-cleaningservice.de",
     "address": {
       "@type": "PostalAddress",
@@ -57,8 +57,32 @@
     "image": "https://www.lak-cleaningservice.de/owner-chair.webp",
     "founder": {
       "@type": "Person",
-      "name": "Linda Akuamoah"
+      "@id": "https://www.lak-cleaningservice.de/#linda-akuamoah",
+      "name": "Linda Akuamoah",
+      "jobTitle": "Inhaberin",
+      "url": "https://www.lak-cleaningservice.de/ueber-uns.html",
+      "image": "https://www.lak-cleaningservice.de/owner-full-400.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/company/lak-cleaning-service/",
+        "https://www.instagram.com/lak_cleaning_service/"
+      ]
     },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "16:00"
+      }
+    ],
+    "hasService": [
+      { "@type": "Service", "name": "Büroreinigung Berlin", "url": "https://www.lak-cleaningservice.de/buero-reinigung-berlin.html" },
+      { "@type": "Service", "name": "Unterhaltsreinigung Berlin", "url": "https://www.lak-cleaningservice.de/unterhaltsreinigung-berlin.html" },
+      { "@type": "Service", "name": "Glasreinigung Berlin", "url": "https://www.lak-cleaningservice.de/glasreinigung-berlin.html" },
+      { "@type": "Service", "name": "Treppenhausreinigung Berlin", "url": "https://www.lak-cleaningservice.de/treppenhausreinigung-berlin.html" },
+      { "@type": "Service", "name": "Bürocontainer-Reinigung Berlin", "url": "https://www.lak-cleaningservice.de/buerocontainer-reinigung-berlin.html" },
+      { "@type": "Service", "name": "Apartment-Reinigung Berlin", "url": "https://www.lak-cleaningservice.de/leistungen.html" }
+    ],
     "review": [
       {
         "@type": "Review",
@@ -144,16 +168,19 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://www.lak-cleaningservice.de/#linda-akuamoah",
     "name": "Linda Akuamoah",
     "jobTitle": "Inhaberin",
+    "description": "Linda Akuamoah ist die Inhaberin von LAK Cleaning Service, einem professionellen Gebäudereinigungsunternehmen in Berlin, spezialisiert auf Büro-, Praxis- und Gewerbereinigung.",
+    "image": "https://www.lak-cleaningservice.de/owner-full-400.jpg",
     "worksFor": {
       "@type": "Organization",
       "name": "LAK Cleaning Service"
     },
-    "url": "https://www.lak-cleaningservice.de",
+    "url": "https://www.lak-cleaningservice.de/ueber-uns.html",
     "sameAs": [
       "https://www.instagram.com/lak_cleaning_service/",
-      "https://www.linkedin.com/company/lak-cleaning-service"
+      "https://www.linkedin.com/company/lak-cleaning-service/"
     ]
   }
   </script>
@@ -243,6 +270,21 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Reinigungsleistungen LAK Cleaning Service Berlin",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "Büroreinigung Berlin", "url": "https://www.lak-cleaningservice.de/buero-reinigung-berlin.html" } },
+      { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Unterhaltsreinigung Berlin", "url": "https://www.lak-cleaningservice.de/unterhaltsreinigung-berlin.html" } },
+      { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Glasreinigung Berlin", "url": "https://www.lak-cleaningservice.de/glasreinigung-berlin.html" } },
+      { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "Treppenhausreinigung Berlin", "url": "https://www.lak-cleaningservice.de/treppenhausreinigung-berlin.html" } },
+      { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "Bürocontainer-Reinigung Berlin", "url": "https://www.lak-cleaningservice.de/buerocontainer-reinigung-berlin.html" } },
+      { "@type": "ListItem", "position": 6, "item": { "@type": "Service", "name": "Apartment-Reinigung Berlin", "url": "https://www.lak-cleaningservice.de/leistungen.html" } }
+    ]
+  }
+  </script>
   <!-- Google Fonts werden erst nach Cookie-Zustimmung geladen (DSGVO) -->
   <link rel="stylesheet" href="styles.css?v=8" />
   <link rel="preload" href="main.js?v=5" as="script" />
@@ -309,6 +351,26 @@
   </nav>
 
   <main>
+
+  <!-- BREADCRUMB -->
+  <nav aria-label="Breadcrumb" style="background:var(--bg-2,#0f172a);border-bottom:1px solid rgba(255,255,255,.07);padding:10px 0;">
+    <div class="container" style="max-width:1200px;margin:0 auto;padding:0 24px;">
+      <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style:none;padding:0;margin:0;display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:.78rem;color:rgba(255,255,255,.45);">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="https://www.lak-cleaningservice.de/" style="color:rgba(255,255,255,.55);text-decoration:none;" data-action="navigate_home" data-context="breadcrumb">
+            <span itemprop="name">LAK Cleaning Service</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li aria-hidden="true" style="color:rgba(255,255,255,.3);">›</li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+          <span itemprop="name" style="color:rgba(255,255,255,.75);">Gebäudereinigung Berlin</span>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ol>
+    </div>
+  </nav>
+
   <!-- HERO -->
   <section class="hero" id="hero">
     <canvas class="hero-canvas" id="heroCanvas"></canvas>
@@ -368,7 +430,7 @@
         </div>
         <h2 class="trust-section-title">aus über <span class="gradient-text">14 Bewertungen</span></h2>
         <p class="trust-section-sub">Unternehmen in Berlin vertrauen auf unsere zuverlässige Reinigung und klare Abläufe.</p>
-        <a href="#kontakt" class="btn-primary" style="margin-top:8px;">
+        <a href="#kontakt" class="btn-primary" style="margin-top:8px;" data-action="schedule-inspection" data-context="trust" data-resource-type="cleaning-service">
           <span>Kostenlose Besichtigung vor Ort vereinbaren</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -386,38 +448,38 @@
         <p>Wir übernehmen Büros, Arztpraxen, Praxen und Gewerbeflächen – und kümmern uns um alles, was dazugehört.</p>
         <p>Sie konzentrieren sich auf Ihr Geschäft. Wir sorgen dafür, dass Ihre Räume sauber sind, wenn Sie sie brauchen.</p>
         <div style="margin-top:32px;">
-          <a href="#kontakt" class="btn-primary">
+          <a href="#kontakt" class="btn-primary" data-action="request-quote" data-context="einstieg" data-resource-type="cleaning-service">
             <span>Jetzt anfragen</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
       </div>
-      <div class="einstieg-checklist reveal-right">
-        <div class="einstieg-item">
+      <ul class="einstieg-checklist reveal-right" style="list-style:none;padding:0;margin:0;">
+        <li class="einstieg-item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/></svg>
           <span>Büroreinigung Berlin</span>
-        </div>
-        <div class="einstieg-item">
+        </li>
+        <li class="einstieg-item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/></svg>
           <span>Unterhaltsreinigung Berlin</span>
-        </div>
-        <div class="einstieg-item">
+        </li>
+        <li class="einstieg-item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/></svg>
           <span>Praxisreinigung Berlin</span>
-        </div>
-        <div class="einstieg-item">
+        </li>
+        <li class="einstieg-item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/></svg>
           <span>Treppenhausreinigung Berlin</span>
-        </div>
-        <div class="einstieg-item">
+        </li>
+        <li class="einstieg-item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/></svg>
           <span>Glasreinigung & Fenster</span>
-        </div>
-        <div class="einstieg-item">
+        </li>
+        <li class="einstieg-item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/></svg>
           <span>Bürocontainer-Reinigung</span>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -525,12 +587,12 @@
           </div>
           <h3>Büroreinigung Berlin</h3>
           <p>Regelmäßige Reinigung für Büros und Arbeitsplätze. Saubere Räume ohne Aufwand für Ihr Team.</p>
-          <div class="service-features">
-            <span>Schreibtische & Oberflächen</span>
-            <span>Sanitäranlagen</span>
-            <span>Küchen & Pausenräume</span>
-          </div>
-          <a href="#kontakt" class="service-link">Angebot anfordern <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+          <ul class="service-features" style="list-style:none;padding:0;margin:0;">
+            <li>Schreibtische & Oberflächen</li>
+            <li>Sanitäranlagen</li>
+            <li>Küchen & Pausenräume</li>
+          </ul>
+          <a href="#kontakt" class="service-link" data-action="request-quote" data-context="leistungen" data-resource-type="cleaning-service">Angebot anfordern <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
         </div>
 
         <div class="service-card featured reveal-up" data-delay="100">
@@ -547,12 +609,12 @@
           </div>
           <h3>Unterhaltsreinigung Berlin</h3>
           <p>Laufende Reinigung für Büros, Praxen und Gewerbeflächen in Berlin. Regelmäßig, planbar und individuell abgestimmt.</p>
-          <div class="service-features">
-            <span>Büros & Gewerbeflächen</span>
-            <span>Arztpraxen & Praxisreinigung</span>
-            <span>Feste Reinigungsintervalle</span>
-          </div>
-          <a href="#kontakt" class="service-link">Angebot anfordern <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+          <ul class="service-features" style="list-style:none;padding:0;margin:0;">
+            <li>Büros & Gewerbeflächen</li>
+            <li>Arztpraxen & Praxisreinigung</li>
+            <li>Feste Reinigungsintervalle</li>
+          </ul>
+          <a href="#kontakt" class="service-link" data-action="request-quote" data-context="leistungen" data-resource-type="cleaning-service">Angebot anfordern <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
         </div>
 
         <div class="service-card reveal-up" data-delay="200">
@@ -564,12 +626,12 @@
           </div>
           <h3>Bürocontainer-Reinigung Berlin</h3>
           <p>Professionelle Reinigung von Bürocontainern auf Baustellen und temporären Standorten. Ordnung und Hygiene sind auch auf kleinem Raum unverzichtbar, gründlich, schnell und auf Ihre Einsatzzeiten abgestimmt.</p>
-          <div class="service-features">
-            <span>Baustellen-Container</span>
-            <span>Mobile Büroeinheiten</span>
-            <span>Flexible Terminplanung</span>
-          </div>
-          <a href="#kontakt" class="service-link">Anfragen <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+          <ul class="service-features" style="list-style:none;padding:0;margin:0;">
+            <li>Baustellen-Container</li>
+            <li>Mobile Büroeinheiten</li>
+            <li>Flexible Terminplanung</li>
+          </ul>
+          <a href="#kontakt" class="service-link" data-action="request-quote" data-context="leistungen" data-resource-type="cleaning-service">Anfragen <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
         </div>
 
         <div class="service-card reveal-up" data-delay="0">
@@ -581,12 +643,12 @@
           </div>
           <h3>Apartment-Reinigung Berlin</h3>
           <p>Reinigung von Mietwohnungen, Serviced Apartments und Ferienwohnungen, sauber, pünktlich und mit besonderem Augenmerk auf Details. Ideal für Vermieter und Property Manager in Berlin.</p>
-          <div class="service-features">
-            <span>Endreinigung bei Mieterwechsel</span>
-            <span>Regelmäßige Grundreinigung</span>
-            <span>Kurzzeitvermietung</span>
-          </div>
-          <a href="#kontakt" class="service-link">Anfragen <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+          <ul class="service-features" style="list-style:none;padding:0;margin:0;">
+            <li>Endreinigung bei Mieterwechsel</li>
+            <li>Regelmäßige Grundreinigung</li>
+            <li>Kurzzeitvermietung</li>
+          </ul>
+          <a href="#kontakt" class="service-link" data-action="request-quote" data-context="leistungen" data-resource-type="cleaning-service">Anfragen <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
         </div>
 
         <div class="service-card reveal-up" data-delay="100">
@@ -598,12 +660,12 @@
           </div>
           <h3>Treppenhausreinigung Berlin</h3>
           <p>Saubere Eingangsbereiche und Treppenhäuser. Für einen gepflegten ersten Eindruck.</p>
-          <div class="service-features">
-            <span>Treppenstufen & Geländer</span>
-            <span>Eingangsbereiche</span>
-            <span>Wöchentliche Reinigung</span>
-          </div>
-          <a href="#kontakt" class="service-link">Angebot anfordern <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+          <ul class="service-features" style="list-style:none;padding:0;margin:0;">
+            <li>Treppenstufen & Geländer</li>
+            <li>Eingangsbereiche</li>
+            <li>Wöchentliche Reinigung</li>
+          </ul>
+          <a href="#kontakt" class="service-link" data-action="request-quote" data-context="leistungen" data-resource-type="cleaning-service">Angebot anfordern <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
         </div>
 
         <div class="service-card reveal-up" data-delay="200">
@@ -615,12 +677,12 @@
           </div>
           <h3>Glasreinigung Berlin</h3>
           <p>Klare Sicht für ein klares Image, wir reinigen Fenster, Glastüren und Fassaden in Bürogebäuden und gewerblich genutzten Objekten mit professioneller Ausrüstung und geschultem Personal. Streifenfrei, innen und außen.</p>
-          <div class="service-features">
-            <span>Innen & Außen</span>
-            <span>Schaufensterfronten</span>
-            <span>Büro- & Gewerbegebäude</span>
-          </div>
-          <a href="#kontakt" class="service-link">Angebot anfordern <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+          <ul class="service-features" style="list-style:none;padding:0;margin:0;">
+            <li>Innen & Außen</li>
+            <li>Schaufensterfronten</li>
+            <li>Büro- & Gewerbegebäude</li>
+          </ul>
+          <a href="#kontakt" class="service-link" data-action="request-quote" data-context="leistungen" data-resource-type="cleaning-service">Angebot anfordern <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
         </div>
 
       </div>
@@ -691,7 +753,7 @@
         </div>
         <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:32px;">
           <a href="#kontakt" class="btn-primary" data-action="request-quote" data-context="about" data-resource-type="cleaning-service"><span>Angebot anfordern</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <a href="ueber-uns.html" class="btn-ghost">Mehr über uns</a>
+          <a href="ueber-uns.html" class="btn-ghost" data-action="view_about_us" data-context="about" data-resource-type="page">Mehr über uns</a>
         </div>
       </div>
     </div>
@@ -889,7 +951,7 @@
         </div>
       </div>
       <div style="text-align:center; margin-top:48px;" class="reveal-up">
-        <a href="#kontakt" class="btn-primary">
+        <a href="#kontakt" class="btn-primary" data-action="schedule-inspection" data-context="prozess" data-resource-type="cleaning-service">
           <span>Kostenlose Besichtigung vereinbaren</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -1072,37 +1134,51 @@
         <span class="section-tag">Ihr Vorteil</span>
         <h2 class="section-title">Was uns <span class="gradient-text">unterscheidet</span></h2>
       </div>
-      <div class="vergleich-grid">
-        <div class="vergleich-card vergleich-other reveal-left">
-          <div class="vergleich-label vergleich-label-other">Andere Anbieter</div>
-          <div class="vergleich-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 18L18 6M6 6l12 12" stroke="#666" stroke-width="2" stroke-linecap="round"/></svg>
-            <p>Wechselndes Personal, neue Gesichter jede Woche</p>
-          </div>
-          <div class="vergleich-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 18L18 6M6 6l12 12" stroke="#666" stroke-width="2" stroke-linecap="round"/></svg>
-            <p>Unklare Abläufe, jeder macht es anders</p>
-          </div>
-          <div class="vergleich-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 18L18 6M6 6l12 12" stroke="#666" stroke-width="2" stroke-linecap="round"/></svg>
-            <p>Hoher Kontrollaufwand für Sie</p>
-          </div>
-        </div>
-        <div class="vergleich-card vergleich-us reveal-right">
-          <div class="vergleich-label vergleich-label-us">LAK Cleaning Service</div>
-          <div class="vergleich-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/></svg>
-            <p><strong>Feste Teams</strong>, dieselben Mitarbeitenden kennen Ihr Objekt</p>
-          </div>
-          <div class="vergleich-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/></svg>
-            <p><strong>Klare Prozesse</strong>, planbar, zuverlässig, ohne Aufwand für Sie</p>
-          </div>
-          <div class="vergleich-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/></svg>
-            <p><strong>Kein Aufwand für Sie</strong>, wir erledigen es</p>
-          </div>
-        </div>
+      <div style="overflow-x:auto;margin-top:40px;">
+        <table class="comparison-table" aria-label="Vergleich: Andere Anbieter vs LAK Cleaning Service" style="width:100%;border-collapse:separate;border-spacing:0;border-radius:12px;overflow:hidden;">
+          <thead>
+            <tr>
+              <th scope="col" style="background:rgba(255,255,255,0.04);color:rgba(255,255,255,0.5);padding:14px 22px;font-size:0.82rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-align:left;border-bottom:1px solid rgba(255,255,255,0.08);">Merkmal</th>
+              <th scope="col" style="background:rgba(255,255,255,0.04);color:rgba(255,255,255,0.5);padding:14px 22px;font-size:0.82rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08);">Andere Anbieter</th>
+              <th scope="col" style="background:rgba(201,151,58,0.12);color:#c9973a;padding:14px 22px;font-size:0.82rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-align:center;border-bottom:1px solid rgba(201,151,58,0.2);">LAK Cleaning Service</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+              <td style="padding:16px 22px;font-weight:600;color:var(--white);background:rgba(255,255,255,0.03);">Personal</td>
+              <td style="padding:16px 22px;color:rgba(255,255,255,0.55);background:rgba(255,255,255,0.03);text-align:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><path d="M6 18L18 6M6 6l12 12" stroke="#666" stroke-width="2" stroke-linecap="round"/></svg>
+                Wechselndes Personal, neue Gesichter jede Woche
+              </td>
+              <td style="padding:16px 22px;color:var(--white);background:rgba(201,151,58,0.05);text-align:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/></svg>
+                <strong>Feste Teams</strong>, dieselben Mitarbeitenden kennen Ihr Objekt
+              </td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+              <td style="padding:16px 22px;font-weight:600;color:var(--white);background:rgba(255,255,255,0.03);">Abläufe</td>
+              <td style="padding:16px 22px;color:rgba(255,255,255,0.55);background:rgba(255,255,255,0.03);text-align:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><path d="M6 18L18 6M6 6l12 12" stroke="#666" stroke-width="2" stroke-linecap="round"/></svg>
+                Unklare Abläufe, jeder macht es anders
+              </td>
+              <td style="padding:16px 22px;color:var(--white);background:rgba(201,151,58,0.05);text-align:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/></svg>
+                <strong>Klare Prozesse</strong>, planbar, zuverlässig, ohne Aufwand für Sie
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:16px 22px;font-weight:600;color:var(--white);background:rgba(255,255,255,0.03);">Kontrollaufwand</td>
+              <td style="padding:16px 22px;color:rgba(255,255,255,0.55);background:rgba(255,255,255,0.03);text-align:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><path d="M6 18L18 6M6 6l12 12" stroke="#666" stroke-width="2" stroke-linecap="round"/></svg>
+                Hoher Kontrollaufwand für Sie
+              </td>
+              <td style="padding:16px 22px;color:var(--white);background:rgba(201,151,58,0.05);text-align:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/></svg>
+                <strong>Kein Aufwand für Sie</strong>, wir erledigen es
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div style="text-align:center; margin-top:40px;" class="reveal-up">
         <a href="#kontakt" class="btn-primary" data-action="request-consultation" data-context="pricing" data-resource-type="cleaning-service">
