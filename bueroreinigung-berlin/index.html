@@ -2339,7 +2339,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 
   var privateDomains = ['gmail.com','googlemail.com','hotmail.com','hotmail.de','outlook.com','outlook.de','live.com','live.de','yahoo.com','yahoo.de','gmx.de','gmx.net','gmx.at','gmx.ch','web.de','t-online.de','freenet.de','icloud.com','me.com','mac.com','aol.com','protonmail.com','proton.me','mailbox.org'];
   var emailVal = document.getElementById('f-email').value.trim().toLowerCase();
-  var emailDomain = emailVal.split('@')[1];
+  var emailDomain = emailVal.split('@').pop();
   if(privateDomains.indexOf(emailDomain) !== -1){
     var errEl = document.getElementById('email-domain-error');
     if(!errEl){ errEl = document.createElement('p'); errEl.id = 'email-domain-error'; errEl.style.cssText = 'color:#dc2626;font-size:.83rem;margin-top:6px;'; document.getElementById('f-email').parentNode.appendChild(errEl); }
