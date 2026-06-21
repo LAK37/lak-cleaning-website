@@ -65,7 +65,16 @@
     .target-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:20px 24px; display:flex; align-items:center; gap:12px; }
     .target-icon { width:36px; height:36px; min-width:36px; background:var(--gold-dim); border-radius:8px; display:flex; align-items:center; justify-content:center; }
     .target-card p { color:var(--gray-1); font-size:0.9rem; font-weight:500; margin:0; }
-    @media (max-width:768px) { .content-grid { grid-template-columns:1fr; gap:40px; } .content-grid.reverse { direction:ltr; } .page-hero { padding:140px 20px 60px; } .page-hero-bg { background:#08090d; } .page-hero-bg img { object-fit:contain; object-position:center 30%; } .quote-block { padding:24px 20px; } }
+    @media (max-width:768px) {
+      .content-grid { grid-template-columns:1fr; gap:40px; }
+      .content-grid.reverse { direction:ltr; }
+      .quote-block { padding:24px 20px; }
+      .page-hero { display:flex; flex-direction:column; padding:0; min-height:auto; padding-top:70px; }
+      .page-hero-bg { position:relative; inset:auto; height:300px; flex-shrink:0; overflow:hidden; }
+      .page-hero-bg img { object-fit:cover; object-position:center 75%; }
+      .page-hero-bg::after { display:none; }
+      .page-hero-content { position:relative; z-index:2; padding:28px 20px 40px; background:var(--bg); }
+    }
   </style>
   <script type="application/ld+json">
   {
