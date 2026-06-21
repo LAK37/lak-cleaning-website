@@ -949,7 +949,7 @@ input, textarea, select, button { font-family: inherit; }
 
 /* ── COOKIE BANNER ───────────────────────────────────────── */
 .cookie-banner {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 2000;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 2200;
   background: rgba(15,17,24,0.97);
   backdrop-filter: blur(16px);
   border-top: 1px solid var(--border);
