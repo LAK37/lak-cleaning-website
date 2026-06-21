@@ -123,7 +123,7 @@ input, textarea, select, button { font-family: inherit; }
 /* ── NAV ─────────────────────────────────────────────────── */
 .nav {
   position: fixed; top: 0; left: 0; right: 0;
-  z-index: 1000; padding: 10px 0;
+  z-index: 1000; padding: 7px 0;
   transition: background 0.4s, padding 0.4s, backdrop-filter 0.4s;
 }
 .nav.scrolled {
