@@ -950,7 +950,7 @@ input, textarea, select, button { font-family: inherit; }
 
 /* ── COOKIE BANNER ───────────────────────────────────────── */
 .cookie-banner {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 2200;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 2000;
   background: rgba(15,17,24,0.97);
   backdrop-filter: blur(16px);
   border-top: 1px solid var(--border);
@@ -1144,6 +1144,7 @@ input, textarea, select, button { font-family: inherit; }
 }
 @media (max-width: 768px) {
   .nav { background: rgba(8,9,13,0.95); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+  .whatsapp-fab { bottom: 200px; right: 20px; padding: 12px 16px; }
 }
 @media (max-width: 480px) {
   .container { padding: 0 20px; }
