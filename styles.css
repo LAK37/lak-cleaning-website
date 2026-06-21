@@ -139,7 +139,7 @@ input, textarea, select, button { font-family: inherit; }
 }
 .nav-logo { display: flex; align-items: center; }
 .nav-logo-img {
-  height: 64px; width: 64px;
+  height: 80px; width: 80px;
   border-radius: 50%;
   object-fit: cover;
   transition: transform 0.3s;
