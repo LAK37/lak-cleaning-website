@@ -1087,7 +1087,7 @@ input, textarea, select, button { font-family: inherit; }
   .reviews-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; overflow: hidden; }
 }
 @media (max-width: 768px) {
-  .nav-links, .nav-cta { display: none; }
+  .nav-links, .nav-cta, .lang-switch { display: none; }
   .nav-dropdown-menu { display: none !important; }
   .nav-burger { display: flex; }
   .usp-grid { grid-template-columns: 1fr; }
