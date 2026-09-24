@@ -2,6 +2,9 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <!-- OpenAI Ads Pixel (consent-gated) -->
+  <link rel="dns-prefetch" href="https://bzrcdn.openai.com" />
+  <script src="/oai-pixel.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gebäudereinigung Berlin für Unternehmen | LAK Cleaning Service</title>
   <meta name="description" content="Strukturierte Gebäudereinigung für Büros, Praxen und Gewerbeobjekte in Berlin. Feste Teams, klare Abläufe, persönliche Betreuung. Jetzt unverbindlich anfragen.">
@@ -2237,6 +2240,9 @@
     <h3>5. Google Tag Manager &amp; Google Analytics 4</h3>
     <p>Diese Website nutzt den Google Tag Manager (GTM) und Google Analytics 4 (GA4) von Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Irland. GTM selbst setzt keine Cookies und verarbeitet keine personenbezogenen Daten. GA4 und Google Ads-Tracking werden ausschließlich mit Ihrer Einwilligung aktiviert (Consent Mode v2, TDDDG § 25 Abs. 1). Bei Zustimmung können Daten in die USA übertragen werden; Google ist unter dem EU-US Data Privacy Framework (DPF) zertifiziert. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Sie können Ihre Einwilligung jederzeit über den Link „Cookie-Einstellungen" im Footer widerrufen. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
 
+    <h3>5a. OpenAI Ads Measurement</h3>
+    <p>Nach Ihrer Einwilligung setzt diese Website das OpenAI Ads Measurement Pixel ein (OpenAI OpCo, LLC, San Francisco, USA). Es misst den Erfolg unserer Werbeanzeigen auf ChatGPT / OpenAI und übermittelt dabei Seitenaufrufe und Conversion-Ereignisse an OpenAI-Server. Ohne Einwilligung werden keine Verbindungen hergestellt. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO. Datenschutzerklärung: <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">openai.com/policies/privacy-policy</a>.</p>
+
     <h3>6. Schriftarten (Bunny Fonts)</h3>
     <p>Diese Website nutzt Bunny Fonts (BunnyWay d.o.o., Šlandrova ulica 4, 1231 Ljubljana-Črnuče, Slowenien) als datenschutzfreundliche Alternative zu Google Fonts. Die Schriftarten werden von EU-Servern geladen; es werden keine Nutzerdaten an Dritte in Drittstaaten übertragen. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</p>
 
@@ -2285,6 +2291,7 @@ function showBanner(){
 function acceptAllCk(){
   localStorage.setItem('lak_ck', JSON.stringify({necessary:true,stats:true,mktg:true}));
   updateConsent(true,true); hideBanner(); closeCkSet();
+  window.loadOpenAIPixel && window.loadOpenAIPixel();
 }
 function rejectCk(){
   localStorage.setItem('lak_ck', JSON.stringify({necessary:true,stats:false,mktg:false}));
@@ -2301,6 +2308,7 @@ function saveCkSet(){
   var s=document.getElementById('ckStats').checked, m=document.getElementById('ckMktg').checked;
   localStorage.setItem('lak_ck', JSON.stringify({necessary:true,stats:s,mktg:m}));
   updateConsent(s,m); hideBanner(); closeCkSet();
+  if (m) window.loadOpenAIPixel && window.loadOpenAIPixel();
 }
 function revokeCk(){
   localStorage.removeItem('lak_ck');

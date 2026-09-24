@@ -340,6 +340,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     banner.classList.add('hidden');
     loadGTM();
     activateExternalServices();
+    window.loadOpenAIPixel && window.loadOpenAIPixel();
   });
 
   /* Ablehnen */
@@ -354,6 +355,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     banner.classList.add('hidden');
     loadGTM();
     activateExternalServices();
+    window.loadOpenAIPixel && window.loadOpenAIPixel();
   });
 
   /* Einwilligung widerrufen – Cookie-Banner erneut anzeigen */

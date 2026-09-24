@@ -10,6 +10,9 @@
     gtag('config', 'G-0KCY47NTW2');
   </script>
   <meta charset="UTF-8" />
+  <!-- OpenAI Ads Pixel (consent-gated) -->
+  <link rel="dns-prefetch" href="https://bzrcdn.openai.com" />
+  <script src="/oai-pixel.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kostenlose Checkliste: Reinigungsfirma in Berlin finden | LAK Cleaning Service</title>
   <meta name="description" content="Laden Sie die kostenlose Checkliste herunter: 7 Punkte die Sie prüfen müssen bevor Sie eine Reinigungsfirma in Berlin beauftragen." />
@@ -1058,6 +1061,7 @@
     function acceptCookie() {
       localStorage.setItem('lak_cookie_consent', 'accepted');
       document.getElementById('cookie-banner').classList.add('hidden');
+      window.loadOpenAIPixel && window.loadOpenAIPixel();
     }
     function dismissCookie() {
       localStorage.setItem('lak_cookie_consent', 'declined');

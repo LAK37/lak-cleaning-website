@@ -2,6 +2,9 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
+  <!-- OpenAI Ads Pixel (consent-gated) -->
+  <link rel="dns-prefetch" href="https://bzrcdn.openai.com" />
+  <script src="/oai-pixel.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vielen Dank – LAK Cleaning Service Berlin</title>
   <meta name="robots" content="noindex, nofollow" />
@@ -23,6 +26,13 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event: 'angebot_angefordert', page_type: 'danke' });
+  </script>
+  <script>
+    /* OpenAI Ads – Conversion: Angebotsanfrage */
+    document.addEventListener('DOMContentLoaded', function() {
+      window.oaiq && window.oaiq('track', 'Lead');
+      window.oaiq && window.oaiq('measure', 'lead_created', { type: 'customer_action' });
+    });
   </script>
 
   <link rel="preconnect" href="https://fonts.bunny.net" />

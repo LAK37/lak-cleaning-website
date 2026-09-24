@@ -10,6 +10,9 @@
     gtag('config', 'G-0KCY47NTW2');
   </script>
   <meta charset="UTF-8" />
+  <!-- OpenAI Ads Pixel (consent-gated) -->
+  <link rel="dns-prefetch" href="https://bzrcdn.openai.com" />
+  <script src="/oai-pixel.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vielen Dank! Ihre Checkliste ist unterwegs | LAK Cleaning Service</title>
   <meta name="robots" content="noindex, nofollow" />
@@ -419,5 +422,12 @@
     </div>
   </footer>
 
+<script>
+  /* OpenAI Ads – Conversion: Checkliste heruntergeladen */
+  document.addEventListener('DOMContentLoaded', function() {
+    window.oaiq && window.oaiq('track', 'Lead');
+    window.oaiq && window.oaiq('measure', 'lead_created', { type: 'customer_action' });
+  });
+</script>
 </body>
 </html>
