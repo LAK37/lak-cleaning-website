@@ -14,6 +14,10 @@
     window.oaiq = q;
   }
 
+  /* Standard: kein Marketing-Consent – verhindert Messung auch wenn das
+     SDK versehentlich geladen würde (zweite Sicherheitsstufe). */
+  window.oaiq('consent', false);
+
   var loaded = false;
 
   /* Lädt oaiq.min.js und initialisiert den Pixel – darf nur nach
@@ -21,6 +25,7 @@
   function doLoad() {
     if (loaded) return;
     loaded = true;
+    window.oaiq('consent', true);
     var j = document.createElement('script');
     j.async = true;
     j.src = 'https://bzrcdn.openai.com/sdk/oaiq.min.js';

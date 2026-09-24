@@ -750,6 +750,7 @@
     document.getElementById('cookieDecline').addEventListener('click', () => {
       localStorage.setItem('cookieConsent', 'declined');
       cookieBanner.style.display = 'none';
+      window.oaiq && window.oaiq('consent', false);
     });
   </script>
 </body>

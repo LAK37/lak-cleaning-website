@@ -1066,6 +1066,7 @@
     function dismissCookie() {
       localStorage.setItem('lak_cookie_consent', 'declined');
       document.getElementById('cookie-banner').classList.add('hidden');
+      window.oaiq && window.oaiq('consent', false);
     }
     (function() {
       if (localStorage.getItem('lak_cookie_consent')) {

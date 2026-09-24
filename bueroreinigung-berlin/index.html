@@ -2296,6 +2296,7 @@ function acceptAllCk(){
 function rejectCk(){
   localStorage.setItem('lak_ck', JSON.stringify({necessary:true,stats:false,mktg:false}));
   updateConsent(false,false); hideBanner();
+  window.oaiq && window.oaiq('consent', false);
 }
 function openCkSet(){
   var saved=JSON.parse(localStorage.getItem('lak_ck')||'{}');
@@ -2315,6 +2316,7 @@ function revokeCk(){
   document.getElementById('ckStats').checked=false;
   document.getElementById('ckMktg').checked=false;
   updateConsent(false,false);
+  window.oaiq && window.oaiq('consent', false);
   closeCkSet();
   showBanner();
 }

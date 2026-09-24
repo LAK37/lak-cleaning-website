@@ -347,6 +347,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   declineBtn && declineBtn.addEventListener('click', () => {
     localStorage.setItem(CONSENT_KEY, 'declined');
     banner.classList.add('hidden');
+    window.oaiq && window.oaiq('consent', false);
   });
 
   /* Karte manuell freischalten (auch ohne Cookie-Banner) */
@@ -363,6 +364,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       localStorage.removeItem(CONSENT_KEY);
+      window.oaiq && window.oaiq('consent', false);
       banner.classList.remove('hidden');
       window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     });
